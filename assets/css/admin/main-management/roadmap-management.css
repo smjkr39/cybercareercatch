@@ -1,0 +1,155 @@
+.qnaManagement-body{
+    margin:0;
+    background:#ffffff;
+}
+
+.qnaManagement-container{
+    width:1300px;
+    margin:40px auto;
+    background:#c9cfe0;
+    padding:30px;
+}
+
+.qnaManagement-top{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.qnaManagement-title{
+    background:#6b83d6;
+    color:white;
+    padding:10px 20px;
+    border-radius:6px;
+    font-weight:bold;
+    cursor: pointer;
+}
+
+/* 상단 메뉴 */
+.qnaManagement-menu1{
+    display:flex;
+    gap:40px;
+}
+
+.qnaManagement-menu1 a{
+    background:#6b83d6;
+    color:white;
+    padding:10px 25px;
+    border-radius:6px;
+    text-decoration: none;
+}
+
+.qnaManagement-logout{
+    padding:6px 12px;
+}
+
+.qnaManagement-main{
+    display:flex;
+    margin-top:30px;
+}
+
+.qnaManagement-leftbar{
+    width:200px;
+    background:#adbbdb;
+    padding-top:20px;
+}
+
+.qnaManagement-left-item{
+    padding:20px;
+    margin-bottom:10px;
+    text-align:center;
+    cursor:pointer;
+}
+
+.qnaManagement-real{
+    background:#8a8a8a;
+    color:white;
+}
+
+.qnaManagement-main form{
+    flex:1;
+}
+.qnaManagement-content{
+    flex:1;
+    background:#ffffff;
+    padding:40px 60px;
+    margin-left:20px;
+}
+
+.qnaManagement-tabmenu{
+    display:flex;
+    justify-content:center;
+    gap:80px;
+    margin-bottom:40px;
+    font-weight:bold;
+}
+
+.qnaManagement-tabmenu div{
+    cursor:pointer;
+}
+
+/* 입력 한 줄 정렬 */
+.qnaManagement-img,
+.qnaManagement-section100 div,
+.qnaManagement-section200 div,
+.qnaManagement-section300 div,
+.qnaManagement-400 div,
+.qnaManagement-section500 div,
+.qnaManagement-section600 div,
+.qnaManagement-700 div,
+.qnaManagement-section800 div{
+    display:flex;
+    align-items:center;
+    margin-bottom:12px;
+}
+
+/* label */
+.qnaManagement-content label{
+    width:160px;
+}
+
+/* input */
+.qnaManagement-content input{
+    flex:1;
+    height:32px;
+}
+
+/* 섹션 제목 */
+.qnaManagement-content h3{
+    margin-top:45px;
+    margin-bottom:25px;
+}
+
+/* 버튼 영역 */
+.qnaManagement-buttons{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+}
+
+.qnaManagement-buttons button{
+    border:none;
+    padding:10px 30px;
+    border-radius:6px;
+    color:white;
+    cursor:pointer;
+}
+
+/* 버튼 색 */
+.btn1{
+    background:#7d84e6;
+}
+
+.btn2{
+    background:#7d84e6;
+}
+
+.btn3{
+    background:#e07d7d;
+}
+
+/* 업로드 버튼 */
+.upload-btn{
+    margin-left:10px;
+    padding:6px 12px;
+}

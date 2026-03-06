@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<!-- 이 문서가 HTML5 최신 표준으로 작성되었음을 브라우저에 선언하는 태그임. -->
+
+<html lang="ko">
+<!-- HTML 문서의 시작을 알림과 동시에, 이 페이지의 주 언어가 한국어(ko)임을 검색 엔진과 스크린 리더기에 명시함. -->
+
+<head>
+    <!-- 화면에 직접 노출되지 않는 설정값(메타데이터, 폰트, CSS 연결 등)을 담는 구역임. -->
+
+    <meta charset="UTF-8" />
+    <!-- 문자 인코딩을 UTF-8로 설정함. 한글이나 특수문자가 브라우저에서 깨지지 않도록 보장하는 필수 코드임. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 반응형 웹을 위한 뷰포트 설정임. 스마트폰/태블릿 등 기기의 화면 너비에 맞춰 초기 배율을 1:1로 렌더링하도록 강제함. -->
+
+    <title>Header</title>
+    <!-- 브라우저 탭에 표시되는 웹페이지의 제목을 정의함. -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- 구글 폰트 서버에 미리 연결을 맺어두어, 폰트 파일을 다운로드할 때 속도를 최적화하는 코드임. -->
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- 실제로 Noto Sans KR과 Poppins 폰트의 스타일시트를 가져와 페이지에 적용함. -->
+
+    <link rel="stylesheet" href="../../../../assets/css/main/header/header.css" />
+    <!-- 앞서 작성한 외부 CSS 파일(header.css)을 불러와서 크기, 색상, 배치 등 디자인을 결정함. -->
+</head>
+
+<body>
+    <!-- 사용자가 브라우저 화면에서 실제로 보게 되는 모든 시각적 콘텐츠가 들어가는 영역임. -->
+
+    <header class="header">
+        <!-- 이 구역이 웹페이지의 상단(헤더)임을 명시하는 시맨틱 태그임. -->
+
+        <div class="header-inner">
+            <!-- 헤더 내부의 콘텐츠(로고, 메뉴, 버튼)를 하나로 묶는 논리적인 박스임. (CSS로 최대 너비 및 중앙 정렬 지정) -->
+            
+            <h1 class="logo">
+                <!-- 페이지에서 가장 최상위 제목을 의미하며, 보통 로고 영역에 사용해 SEO(검색엔진 최적화) 가중치를 부여함. -->
+
+                <a href="메인페이지_주소.html" class="logo-link" aria-label="CyberCareerCatch 홈">
+                    <!-- 클릭 시 지정된 경로로 이동시키는 하이퍼링크 태그임. aria-label은 시각 장애인용 스크린 리더기가 읽을 텍스트를 지정함. -->
+
+                    <span class="logo-strong">C</span><span class="logo-soft">yber</span>
+                    <span class="logo-strong">C</span><span class="logo-soft">areer</span>
+                    <span class="logo-strong">C</span><span class="logo-soft">atch</span>
+                    <!-- span 태그는 줄바꿈 없이 텍스트 특정 부분(대문자 C 등)에만 독립적인 디자인(진하게/연하게)을 적용하기 위해 사용함. -->
+                </a>
+            </h1>
+
+            <nav class="main-nav" aria-label="메인 메뉴">
+                <!-- 이 구역이 메뉴(네비게이션) 영역임을 명시하는 시맨틱 태그임. -->
+
+                <ul class="nav-list">
+                    <!-- 순서가 없는 목록을 생성함. 웹사이트의 메뉴 바는 내부적으로 리스트 구조를 띄는 것이 표준임. -->
+
+                    <li class="nav-item dropdown">
+                        <!-- 리스트의 개별 항목임. 드롭다운 기능이 포함된 항목임을 명시하기 위해 dropdown 클래스를 추가함. -->
+
+                        <a href="#" class="nav-link" onclick="toggleDropdown(event)">직군검사</a>
+                        <!-- 이 텍스트를 클릭했을 때, 하단에 정의된 JS 함수(toggleDropdown)를 즉시 실행하라는 이벤트 리스너(트리거)가 포함되어 있음. -->
+
+                        <ul class="dropdown-menu job-menu">
+                            <!-- '직군검사' 메뉴 하위에 종속된 서브 메뉴 리스트임. CSS에서 숨겨두었다가 자바스크립트가 개입하면 나타남. -->
+
+                            <li><a href="보안컨설팅_페이지주소.html">보안컨설팅</a></li>
+                            <!-- 각 서브 메뉴 항목이며, href 속성에 정의된 특정 페이지 주소로 이동을 수행함. -->
+                            <li><a href="시스템엔지니어_페이지주소.html">시스템/네트워크/엔지니어</a></li>
+                            <li><a href="보안관제_페이지주소.html">보안관제</a></li>
+                            <li><a href="디지털포렌식_페이지주소.html">침해사고/디지털포렌식</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="기업홍보_페이지주소.html" class="nav-link">기업홍보</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link" onclick="toggleDropdown(event)">커뮤니티</a>
+                        <ul class="dropdown-menu community-menu">
+                            <li><a href="자유게시판_페이지주소.html">자유게시판</a></li>
+                            <li><a href="기업QnA_페이지주소.html">기업QnA</a></li>
+                            <li><a href="박람회일정_페이지주소.html">박람회일정</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="auth-area">
+                <!-- 두 개의 버튼(로그인, 회원가입)을 하나의 묶음으로 처리하여 헤더 우측 끝에 배치하기 위한 컨테이너임. -->
+
+                <a href="로그인_페이지주소.html" class="auth-btn">
+                    <svg class="login-icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <!-- 수학적 좌표로 그려지는 벡터 그래픽 렌더링 태그(아이콘)임. aria-hidden="true"로 스크린 리더기가 읽지 않고 넘어가게 함. -->
+                        <path d="M12 12a4.25 4.25 0 1 0-4.25-4.25A4.25 4.25 0 0 0 12 12Zm0 1.75c-4.14 0-7.5 2.52-7.5 5.63A1.12 1.12 0 0 0 5.63 20.5h12.74A1.12 1.12 0 0 0 19.5 19.38C19.5 16.27 16.14 13.75 12 13.75Z" fill="currentColor"/>
+                    </svg>
+                    <span>로그인</span>
+                </a>
+                
+                <a href="회원가입_페이지주소.html" class="auth-btn">회원가입</a>
+            </div>
+
+        </div>
+    </header>
+
+    <script>
+        // 브라우저에서 실행될 자바스크립트 로직을 작성하는 공간임.
+
+        function toggleDropdown(event) {
+            // 메뉴 클릭 시 실행될 동작을 묶어둔 함수 블록임.
+
+            event.preventDefault(); 
+            // <a> 태그 클릭 시 브라우저가 기본 수행하는 동작(페이지 최상단으로 강제 스크롤 이동 등)을 차단하여 화면 튕김을 막음.
+            
+            let parentLi = event.target.closest('.dropdown');
+            // 사용자가 클릭한 요소(event.target)를 기준으로 상위 요소로 거슬러 올라가며 가장 가까운 '.dropdown' 클래스를 가진 부모 HTML 요소(li)를 찾아 변수에 저장함.
+            
+            document.querySelectorAll('.dropdown').forEach(function(el) {
+                // 문서 내에 존재하는 모든 '.dropdown' 클래스 요소를 찾아 배열 형태로 하나씩 순회함.
+
+                if(el !== parentLi) {
+                    // 순회 중인 요소가 방금 사용자가 클릭한 그 메뉴가 아니라면
+
+                    el.classList.remove('active');
+                    // 해당 요소의 'active' 클래스를 삭제함. (다른 메뉴가 열려있다면 강제로 닫는 역할)
+                }
+            });
+
+            parentLi.classList.toggle('active');
+            // 클릭한 메뉴(parentLi)에 'active' 클래스가 없으면 추가(열기), 있으면 삭제(닫기)하는 스위치 역할을 함.
+        }
+
+        window.addEventListener('click', function(e) {
+            // 브라우저 창 어느 곳이든 클릭이 발생하면 이를 감지해 함수를 실행시킴.
+
+            if (!e.target.matches('.nav-link')) {
+                // 클릭한 요소가 메인 메뉴 글자('.nav-link')가 아닐 경우 조건이 성립됨. (즉, 빈 바탕화면 등을 클릭했을 때)
+
+                document.querySelectorAll('.dropdown').forEach(function(el) {
+                    el.classList.remove('active');
+                    // 열려있는 모든 드롭다운 메뉴의 'active' 상태를 강제로 해제하여 자연스럽게 닫히게 함.
+                });
+            }
+        });
+    </script>
+</body>
+</html>

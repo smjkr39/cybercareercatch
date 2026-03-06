@@ -1,0 +1,256 @@
+:root {
+  --brand-blue: #001AFF;
+  --text-main: #222222;
+  --text-nav: #444444;
+  --text-sub: #666666;
+  --line-color: #1a1a1a;
+  --btn-border: #d8d8d8;
+  --dropdown-border: #e6eaf2;
+  --dropdown-shadow: 0 16px 30px rgba(0, 0, 0, 0.08);
+  --hover-bg: #f5f8ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #ffffff;
+  color: var(--text-main);
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+/* 헤더 기본 */
+.header {
+  width: 100%;
+  background: #ffffff;
+  border-bottom: 1px solid var(--line-color);
+  position: relative;
+  z-index: 1000;
+}
+
+.header a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.header ul,
+.header li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header-inner {
+  max-width: 1440px;
+  height: 110px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 36px;
+}
+
+/* 로고 */
+.logo {
+  margin: 0;
+  flex-shrink: 0;
+}
+
+.logo-link {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  font-family: "Poppins", sans-serif;
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.logo-strong {
+  color: #001AFF;
+  opacity: 1;
+}
+
+.logo-soft {
+  color: #001AFF;
+  opacity: 0.6;
+}
+
+/* 메뉴 */
+.main-nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  gap: 72px;
+}
+
+/* 서브메뉴 가로 정렬을 위한 기준점 해제 */
+.nav-item {
+  position: static; 
+}
+
+.nav-link {
+  height: 110px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--text-nav);
+  transition: color 0.2s ease;
+}
+
+.nav-item.active > .nav-link {
+  color: #111111;
+}
+
+/* 드롭다운 화살표 */
+.dropdown > .nav-link::after {
+  content: "";
+  width: 8px;
+  height: 8px;
+  margin-left: 8px;
+  border-right: 1.5px solid #666666;
+  border-bottom: 1.5px solid #666666;
+  transform: rotate(45deg) translateY(-2px);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.dropdown.active > .nav-link::after {
+  border-color: #111111;
+  transform: rotate(225deg) translateY(-1px);
+}
+
+/* 가로 한 줄 바(Bar) 드롭다운 */
+.dropdown-menu {
+  position: absolute;
+  top: 100%; 
+  left: 0;
+  width: 100%; 
+  background: #ffffff;
+  
+  /* 위/아래 선을 모두 동일한 회색으로 일치 */
+  border-top: 1px solid var(--btn-border); 
+  border-bottom: 1px solid var(--btn-border); 
+  
+  border-radius: 0;
+  box-shadow: none;
+  
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  gap: 60px; 
+  padding: 0;
+  
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 50;
+  transition: opacity 0.22s ease, visibility 0.22s ease;
+}
+
+.job-menu, .community-menu {
+  min-width: auto;
+}
+
+.dropdown-menu li {
+  display: flex;
+  align-items: center;
+}
+
+/* 서브 메뉴 텍스트 및 클릭 영역 스타일 */
+.dropdown-menu li a {
+  display: inline-block; 
+  padding: 16px 10px; 
+  white-space: nowrap;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-sub);
+  transition: color 0.2s ease;
+  cursor: pointer; /* 클릭 가능한 요소임을 명확히 표시 */
+}
+
+.dropdown-menu li a:hover {
+  background: transparent; 
+  color: var(--brand-blue);
+}
+
+.dropdown.active > .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+/* 우측 버튼 */
+.auth-area {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.auth-btn {
+  min-width: 120px;
+  height: 44px;
+  padding: 0 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1px solid var(--btn-border);
+  border-radius: 6px;
+  background: #ffffff;
+  color: #222222;
+  font-size: 16px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.auth-btn:hover {
+  border-color: #bfc6d1;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  transform: translateY(-1px);
+}
+
+.login-icon {
+  width: 20px;
+  height: 20px;
+  color: #7d7d7d;
+  flex-shrink: 0;
+}
+
+/* 반응형 */
+@media (max-width: 1280px) {
+  .header-inner {
+    padding: 0 24px;
+    gap: 24px;
+  }
+
+  .nav-list {
+    gap: 44px;
+  }
+
+  .logo-link {
+    font-size: 31px;
+  }
+
+  .nav-link {
+    font-size: 17px;
+  }
+}

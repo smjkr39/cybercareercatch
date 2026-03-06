@@ -1,0 +1,156 @@
+.qnaManagement-body {
+    margin: 0;
+    background: #ffffff;
+}
+
+.qnaManagement-container {
+    width: 1300px;
+    margin: 40px auto;
+    background: #c9cfe0;
+    padding: 30px;
+   
+}
+
+.qnaManagement-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.qnaManagement-title {
+    background: #6b83d6;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+   
+}
+/*상단메뉴*/
+.qnaManagement-menu1 {
+    display: flex;
+    gap: 40px;
+}
+
+.qnaManagement-menu1 a {
+    background: #6b83d6;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 6px;
+    text-decoration: none;
+   
+}
+
+.qnaManagement-menu1 a:hover {
+    background: #5569c1;
+}
+
+.qnaManagement-logout {
+    padding: 6px 12px;
+  
+}
+
+.qnaManagement-logout:hover {
+    background: #dcdcdc;
+}
+
+.qnaManagement-main {
+    display: flex;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.qnaManagement-leftbar {
+    width: 200px;
+    background: #adbbdb;
+    padding-top: 20px;
+}
+
+.qnaManagement-left-item {
+    padding: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 4px;
+    color: #222;
+}
+
+.qnaManagement-left-item:hover {
+    background: #949fca;
+    color: white;
+}
+
+.qnaManagement-real {
+    background: #8a8a8a;
+    color: white;
+    font-weight: 700;
+    cursor: default;
+    user-select: none;
+}
+
+.qnaManagement-main{
+    display:flex;
+    margin-top:30px;
+}
+
+
+
+.qnaManagement-leftbar{
+    width:200px;
+    background:#adbbdb;
+    padding-top:20px;
+}
+
+.qnaManagement-left-item{
+    padding:20px;
+    margin-bottom:10px;
+    text-align:center;
+}
+
+.qnaManagement-real{
+    background:#8a8a8a;
+    color:white;
+}
+
+.qnaManagement-content{
+    flex:1;
+    background:#f2f2f2;
+    padding:40px;
+    margin-left:20px;
+}
+
+
+.qnaManagement-question{
+    margin-bottom:40px;
+}
+
+.qnaManagement-question input{
+    width:600px;
+    height:40px;
+    margin-top:10px;
+}
+
+
+.qnaManagement-btn-group{
+    margin-top:10px;
+}
+
+.qnaManagement-btn-group button{
+    border:none;
+    padding:8px 20px;
+    margin-right:10px;
+    border-radius:6px;
+    color:white;
+}
+
+.qnaManagement-check{
+    background:#7d84e6;
+}
+
+.qnaManagement-revise{
+    background:#7d84e6;
+}
+
+.qnaManagement-cancel{
+    background:#e07d7d;
+}
