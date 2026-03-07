@@ -3,9 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>기업 홍보관</title>
+    <title>CyberCareerCatch</title>
+    <link rel="stylesheet" href="../../../assets/css/main/company/company-ad.css">
+    
 </head>
 <body>
-    
+  <!-- ad -> company-ad 축약어 -->
+    <main class="ad-main">
+    <p class="ad-main-title">기업홍보페이지</p>
+    <div class="ad-sort-bar">
+      <!-- sel -> select 축약어 -->
+      <select class="ad-sort-sel" id="sortSelect">
+        <option value="최신순">최신순</option>
+        <option value="인기순">인기순</option>
+        <option value="이름순">이름순</option>
+      </select>
+    </div>
+    <div class="ad-grid" id="cardGrid"></div>
+    <!-- pg -> pagination -->
+    <div class="ad-pg" id="pagination"></div>
+  </main>
 </body>
+<script src="../../../assets/js/main/company/company-ad.js"></script>
 </html>
