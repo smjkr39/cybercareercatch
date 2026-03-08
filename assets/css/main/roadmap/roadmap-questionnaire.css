@@ -1,5 +1,23 @@
 /* 축약어 주석 동일 */
-* {}
+
+      /* Abbrev(축약어) 규칙
+      rmq = RoadMap Questionnaire (이 페이지 공통 prefix)
+      hdr = header(상단 타이틀 영역)
+      job = job cards(직무 카드 영역)
+      map = roadmap image(로드맵 이미지 영역)
+      more = 더보기 버튼 영역
+      pnl = panel(테두리 있는 박스/카드 단위)
+      frm = frame(패널 외곽 테두리)
+      box = 패널 내부 컨텐츠 박스
+      head = 패널 헤더(번호/제목 줄)
+      row = 한 줄(좌/우 또는 단일 항목)
+      colL/colR = 좌/우 컬럼
+      grid = 2열 배치 영역
+      col = grid의 컬럼
+      it = item(단일 항목)
+      ic = icon
+      img = image
+     */
 
 .rmq-wrap {
     width: 1440px;
