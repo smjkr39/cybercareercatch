@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자유게시판 글쓰기</title>
+  <link rel="stylesheet" href="../../../assets/css/main/community/add-post.css">
+</head>
+<body>
+  <main class="free-write-main">
+    <div class="free-write-top">
+      <h2 class="free-write-title">자유게시판</h2>
+      <a href="post-list.html" class="free-write-move-btn">자유게시판으로 이동</a>
+    </div>
+
+    <div class="free-write-box">
+      <div class="free-write-row">
+        <label class="free-write-label" for="postTitle">제목</label>
+        <input
+          type="text"
+          id="postTitle"
+          class="free-write-title-input"
+          placeholder="게시글 제목을 입력해주세요."
+        >
+      </div>
+
+      <div class="free-write-row free-write-row-content">
+        <label class="free-write-label" for="postContent">내용</label>
+        <textarea
+          id="postContent"
+          class="free-write-content-input"
+          placeholder="자유롭게 내용을 입력해주세요"
+        ></textarea>
+      </div>
+
+      <div class="free-write-btn-wrap">
+        <button type="button" class="free-write-btn" id="savePostBtn">등록완료</button>
+      </div>
+    </div>
+  </main>
+
+  <script src="../../../assets/js/main/community/add-qna.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자유게시판 상세</title>
+  <link rel="stylesheet" href="../../../assets/css/main/community/post-detail.css">
+</head>
+<body>
+  <main class="fd-main">
+    <div class="fd-top">
+      <div class="fd-board-title">자유게시판</div>
+      <a href="post-list.html" class="fd-move-btn">자유게시판목록으로 이동하기</a>
+    </div>
+
+    <div class="fd-box">
+      <div class="fd-post-wrap">
+        <div class="fd-post-head">
+          <div class="fd-post-title" id="postTitleView">제목</div>
+
+          <div class="fd-post-info">
+            <div class="fd-post-info-item" id="postWriter">ID :</div>
+            <div class="fd-post-info-item" id="postViews">| 조회수 :</div>
+            <div class="fd-post-info-item" id="postDate">| 작성일 :</div>
+          </div>
+
+          <div class="fd-post-actions" id="postActions">
+            <button type="button" class="fd-act-btn fd-act-edit" id="btnEdit">수정</button>
+            <button type="button" class="fd-act-btn fd-act-del" id="btnDelete">삭제</button>
+
+            <button type="button" class="fd-act-btn fd-act-save" id="btnSave" style="display:none;">저장</button>
+            <button type="button" class="fd-act-btn fd-act-cancel" id="btnCancel" style="display:none;">취소</button>
+          </div>
+        </div>
+
+        <div class="fd-post-content" id="postContentView">내용</div>
+
+        <div class="fd-edit-area" id="editArea" style="display:none;">
+          <input type="text" id="editTitle" class="fd-edit-title" placeholder="제목">
+          <textarea id="editContent" class="fd-edit-content" placeholder="내용"></textarea>
+        </div>
+      </div>
+
+      <div class="fd-comment-area">
+        <div class="fd-comment-list" id="commentList"></div>
+
+        <div class="fd-comment-write">
+          <input type="text" id="commentInput" class="fd-comment-input" placeholder="댓글을 작성해주세요">
+          <button type="button" id="btnComment" class="fd-comment-btn">입력</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="../../../assets/js/main/community/post-detail.js"></script>
+</body>
+</html>
