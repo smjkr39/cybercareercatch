@@ -5,8 +5,8 @@
 }
 
 body {
-  background: #f7f7f7;
-  color: #333;
+  background: white;
+  color: black;
   font-size: 14px;
 }
 
@@ -26,26 +26,29 @@ body {
 .free-write-title {
   font-size: 28px;
   font-weight: 700;
+  color: black;
 }
 
 .free-write-move-btn {
-  background: #8f96ff;
+  background: #2563eb;
   color: white;
   padding: 10px 16px;
   border-radius: 6px;
   font-size: 13px;
   text-decoration: none;
+  border: 1px solid #2563eb;
 }
 
 .free-write-move-btn:hover {
-  background: #7b83f5;
+  background: #1d4ed8;
+  border: 1px solid #1d4ed8;
 }
 
 .free-write-box {
   width: 100%;
-  background: #efefef;
-  border: 1px solid #d9d9d9;
-  border-radius: 16px;
+  background: white;
+  border: 1px solid black;
+  border-radius: 12px;
   padding: 45px 40px 40px;
 }
 
@@ -63,28 +66,40 @@ body {
   font-size: 16px;
   font-weight: 700;
   margin-bottom: 12px;
-  color: #222;
+  color: black;
 }
 
 .free-write-title-input {
   width: 100%;
   height: 44px;
   border: none;
-  border-bottom: 1px solid #999;
+  border-bottom: 2px solid black;
   background: transparent;
   font-size: 15px;
   padding: 0 4px;
+  color: black;
+}
+
+.free-write-title-input:focus {
+  outline: none;
+  border-bottom: 2px solid red;
 }
 
 .free-write-content-input {
   width: 100%;
   height: 420px;
   border: none;
-  border-bottom: 1px solid #999;
+  border-bottom: 2px solid black;
   background: transparent;
   resize: none;
   font-size: 15px;
   padding: 10px 4px;
+  color: black;
+}
+
+.free-write-content-input:focus {
+  outline: none;
+  border-bottom: 2px solid red;
 }
 
 .free-write-btn-wrap {
@@ -93,14 +108,16 @@ body {
 }
 
 .free-write-btn {
-  border: none;
-  background: #8f96ff;
+  border: 1px solid #dc2626;
+  background: #dc2626;
   color: white;
   padding: 8px 16px;
   border-radius: 6px;
   font-size: 12px;
+  cursor: pointer;
 }
 
 .free-write-btn:hover {
-  background: #7b83f5;
+  background: #b91c1c;
+  border: 1px solid #b91c1c;
 }
