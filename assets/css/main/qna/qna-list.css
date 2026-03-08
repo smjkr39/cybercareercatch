@@ -145,6 +145,24 @@ body {
     color: #666;
 }
 
+/* qna-list-top-actions : 글쓰기 버튼 + 정렬 드롭다운 세로 묶음 */
+.qna-list-top-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 8px;
+}
+
+.qna-list-sort-sel {
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 5px 28px 5px 14px;
+    font-size: 12px;
+    cursor: pointer;
+    background: #fff;
+    color: #333;
+}
+
 /* qna-list-pg : 페이지네이션 (pg = pagination 축약) */
 .qna-list-pg {
     display: flex;

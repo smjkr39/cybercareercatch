@@ -8,7 +8,7 @@ const posts = [
   { id: 2, num: 2, title: '꼬으으응 뭘적지', company: '디노기', date: '260303', views: 192, badge: 'done' },
   { id: 3, num: 3, title: '꼬으으응 뭘적지', company: '디노기', date: '260304', views: 193, badge: 'wait' },
   { id: 4, num: 4, title: '꼬으으응 뭘적지', company: '디노기', date: '260305', views: 194, badge: 'wait' },
-  { id: 5, num: 5, title: '꼬으으응 뭘적지', company: '디노기', date: '260306', views: 195, badge: 'wait' },
+  { id: 5, num: 5, title: '야홍', company: '디노기', date: '260306', views: 195, badge: 'wait' },
 ];
 
 // 댓글 목록 (실제는 API)
@@ -23,43 +23,8 @@ const post = posts.find(p => String(p.id) === String(urlId)) || posts[1];
 // qna-detail-post 렌더링
 document.getElementById('detailTitle').textContent   = post.title;
 document.getElementById('detailCompany').textContent = post.company;
-document.getElementById('detailAuthor').textContent  = post.author || '익명';
+document.getElementById('detailAuthor').textContent  = post.author || '유저';
 document.getElementById('detailViews').textContent   = post.views;
 document.getElementById('detailDate').textContent    = '2026.02.28 14:00';
 document.getElementById('detailBody').textContent    = post.body || '';
 document.getElementById('detailTag').textContent     = post.tag || '소식';
-
-// qna-detail-cmts 댓글 렌더링
-function renderComments() {
-  document.getElementById('detailComments').innerHTML = comments.map((c, i) => `
-    <div class="qna-detail-cmt">
-      <div class="qna-detail-cmt-meta">
-        <span>${c.author}</span>
-        <span>${c.date}</span>
-      </div>
-      <div class="qna-detail-cmt-body">${c.body}</div>
-      <button class="qna-detail-cmt-del" onclick="deleteComment(${i})">✕</button>
-    </div>
-  `).join('');
-}
-
-function deleteComment(i) {
-  comments.splice(i, 1);
-  renderComments();
-}
-
-// qna-detail-reply-inp : 댓글 입력 이벤트
-document.getElementById('btnReply').addEventListener('click', () => {
-  const val = document.getElementById('replyInput').value.trim();
-  if (!val) return;
-  comments.push({ author: '나', date: new Date().toLocaleString('ko-KR'), body: val });
-  document.getElementById('replyInput').value = '';
-  renderComments();
-});
-
-// Enter 키로도 댓글 제출
-document.getElementById('replyInput').addEventListener('keydown', e => {
-  if (e.key === 'Enter') document.getElementById('btnReply').click();
-});
-
-renderComments();

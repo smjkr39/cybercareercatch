@@ -9,19 +9,12 @@ const expoData = {
         { company: 'Google', location: '서울시 강남구', job: '공격, 방어' },
         { company: 'Google', location: '서울시 강남구', job: '공격, 방어' },
         { company: 'Google', location: '서울시 강남구', job: '공격, 방어' },
-    ],
-    section2: [
-        { company: 'Kakao', location: '서울시 성동구', job: '분석, 관제' },
-        { company: 'Naver', location: '경기도 성남시', job: '시스템, 네트워크' },
-        { company: 'LINE', location: '서울시 중구', job: '보안컨설팅' },
     ]
 };
 
 // ── 박람회 이벤트 날짜 (캘린더 점 표시용)
 const expoDates = {
     '2026-03-07': true,
-    '2026-03-15': true,
-    '2026-03-22': true,
 };
 
 // ── 캘린더 상태
@@ -30,6 +23,7 @@ let calMonth = 2; // 0-indexed (2 = March)
 
 const MONTH_NAMES = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
 
+// 임시 캘린더(추후 api 사용 예정)
 function renderCalendar(year, month) {
   const today = new Date();
   const firstDay = new Date(year, month, 1).getDay();
@@ -91,15 +85,6 @@ function renderexpoTable(tabKey) {
   `).join('');
     document.getElementById('expoBody').innerHTML = rows;
 }
-
-// ── 탭 전환
-document.querySelectorAll('.tab').forEach(btn => {
-    btn.addEventListener('click', function () {
-        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-        this.classList.add('active');
-        renderexpoTable(this.dataset.tab);
-    });
-});
 
 // ── 월 이동
 document.getElementById('prevMonth').addEventListener('click', () => {

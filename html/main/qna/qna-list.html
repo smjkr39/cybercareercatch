@@ -1,16 +1,25 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CyberCareerCatch - 기업 QnA 목록</title>
-  <link rel="stylesheet" href="../../../assets/css/main/qna/qna-list.css"/>
+  <link rel="stylesheet" href="../../../assets/css/main/qna/qna-list.css" />
 </head>
+
 <body>
   <!-- qna-list-main : 목록 메인 영역 -->
   <main class="qna-list-main">
     <div class="qna-list-top">
       <h2 class="qna-list-title">기업 QnA</h2>
+      <div class="qna-list-top-actions">
+        <a href="add-qna.html" class="qna-list-search-btn qna-list-search-btn-write">글쓰기</a>
+        <select class="qna-list-sort-sel" id="sortSelect">
+          <option value="recent">최신순</option>
+          <option value="name">이름순</option>
+        </select>
+      </div>
     </div>
 
     <!-- qna-list-filter : 기업 필터 드롭다운 (filter 축약) -->
@@ -24,7 +33,6 @@
         <option>회사4</option>
       </select>
     </div>
-
     <!-- qna-list-tbl : 게시판 테이블 (tbl = table 축약) -->
     <table class="qna-list-tbl">
       <thead>
@@ -37,7 +45,48 @@
           <th></th>
         </tr>
       </thead>
-      <tbody id="qnaTableBody"></tbody>
+      <<tbody>
+        <!-- qna-list-tbl-notice : 공지 행 -->
+        <tr class="qna-list-tbl-notice">
+          <td class="qna-list-tbl-num">공지</td>
+          <td>공지사항</td>
+          <td>관리자</td>
+          <td>700202</td>
+          <td>1235</td>
+        </tr>
+
+        <tr data-id="1" onclick="location.href='qna-detail.html?id=1'">
+          <td class="qna-list-tbl-num">1</td>
+          <td>꼬으으응 뭘적지</td>
+          <td>디노기</td>
+          <td>260302</td>
+          <td>191</td>
+        </tr>
+
+        <tr data-id="2" onclick="location.href='qna-detail.html?id=2'">
+          <td class="qna-list-tbl-num">2</td>
+          <td>꼬으으응 뭘적지</td>
+          <td>디노기</td>
+          <td>260303</td>
+          <td>192</td>
+        </tr>
+
+        <tr data-id="3" onclick="location.href='qna-detail.html?id=3'">
+          <td class="qna-list-tbl-num">3</td>
+          <td>꼬으으응 뭘적지</td>
+          <td>디노기</td>
+          <td>260304</td>
+          <td>193</td>
+        </tr>
+
+        <tr data-id="4" onclick="location.href='qna-detail.html?id=4'">
+          <td class="qna-list-tbl-num">4</td>
+          <td>꼬으으응 뭘적지</td>
+          <td>디노기</td>
+          <td>260305</td>
+          <td>194</td>
+        </tr>
+        </tbody>
     </table>
 
     <!-- qna-list-pg : 페이지네이션 (pg = pagination 축약) -->
@@ -50,12 +99,14 @@
         <option>내용</option>
         <option>작성자</option>
       </select>
-      <input class="qna-list-search-inp" type="text" placeholder="검색할 내용을 입력하세요" id="searchInput"/>
+      <input class="qna-list-search-inp" type="text" placeholder="검색할 내용을 입력하세요" id="searchInput" />
       <button class="qna-list-search-btn" id="btnSearch">검색</button>
-      <a href="add-qna.html" class="qna-list-search-btn qna-list-search-btn-write">글쓰기</a>
+
     </div>
+
   </main>
 
   <script src="../../../assets/js/main/qna/qna-list.js"></script>
 </body>
+
 </html>
