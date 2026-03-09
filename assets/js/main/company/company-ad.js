@@ -30,10 +30,12 @@ function renderCards(page) {
   const start = (page - 1) * ITEMS_PER_PAGE;
   const items = filteredCards.slice(start, start + ITEMS_PER_PAGE);
   grid.innerHTML = items.map(item => `
-    <div class="ad-grid-card">
-      <span class="ad-grid-card-num">${item.id}</span>
-      <span>${item.label}</span>
-    </div>
+    <a href="company-info.html">
+      <div class="ad-grid-card">
+        <span class="ad-grid-card-num">${item.id}</span>
+        <span>${item.label}</span>
+      </div>
+    </a>
   `).join('');
 }
 

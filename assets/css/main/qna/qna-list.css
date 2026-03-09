@@ -11,31 +11,16 @@ body {
     line-height: 1.6;
 }
 
-/* qna-btn-primary : 주요 액션 버튼 (공통) */
-.qna-btn-primary {
-    background: #6c7fe8;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    padding: 9px 20px;
-    font-size: 13px;
-    cursor: pointer;
-    white-space: nowrap;
+header {
+    height: 166px;
 }
 
-.qna-btn-primary:hover {
-    background: #5a6ed6;
-}
-
-/* ── LIST PAGE ── */
-/* qna-list-main : 목록 메인 영역 */
 .qna-list-main {
     max-width: 780px;
     margin: 0 auto;
     padding: 32px 24px 60px;
 }
 
-/* qna-list-top : 제목 + 버튼 행 */
 .qna-list-top {
     display: flex;
     align-items: center;
@@ -43,18 +28,22 @@ body {
     margin-bottom: 20px;
 }
 
-/* qna-list-title : 게시판 제목 */
 .qna-list-title {
     font-size: 20px;
     font-weight: 700;
 }
 
-/* qna-list-filter : 기업 필터 래퍼 */
-.qna-list-filter {
-    margin-bottom: 20px;
+.qna-list-top-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
 }
 
-/* qna-list-filter-sel : 기업 select (sel = select 축약) */
+.qna-list-filter {
+    margin-bottom: 12px;
+}
+
 .qna-list-filter-sel {
     border: 1px solid #ccc;
     border-radius: 6px;
@@ -63,132 +52,122 @@ body {
     cursor: pointer;
     background: #fff;
     appearance: none;
-    -webkit-appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 24 24'%3E%3Cpath fill='%23666' d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 8px center;
-}
-
-/* qna-list-tbl : 게시판 테이블 (tbl = table 축약) */
-.qna-list-tbl {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 16px;
-}
-
-.qna-list-tbl thead tr {
-    border-bottom: 2px solid #ddd;
-}
-
-.qna-list-tbl th {
-    padding: 10px 8px;
-    text-align: left;
-    font-size: 12px;
-    color: #888;
-    font-weight: 600;
-}
-
-.qna-list-tbl tbody tr {
-    border-bottom: 1px solid #f0f0f0;
-    cursor: pointer;
-}
-
-.qna-list-tbl tbody tr:hover {
-    background: #f5f7ff;
-}
-
-.qna-list-tbl td {
-    padding: 10px 8px;
-    font-size: 13px;
-}
-
-/* qna-list-tbl-notice : 공지 행 강조 */
-.qna-list-tbl-notice {
-    background: #fff0f3;
-}
-
-.qna-list-tbl-notice td {
-    font-weight: 700;
-    color: #c0392b;
-}
-
-/* qna-list-tbl-num : 번호 열 */
-.qna-list-tbl-num {
-    color: #aaa;
-    width: 48px;
-}
-
-/* qna-list-tbl-title-hot : 인기 게시글 제목 색상 */
-.qna-list-tbl-title-hot {
-    color: #e74c3c;
-}
-
-/* qna-list-tbl-badge : 답변 상태 배지 (badge 축약) */
-.qna-list-tbl-badge {
-    display: inline-block;
-    font-size: 10px;
-    padding: 2px 8px;
-    border-radius: 10px;
-    font-weight: 600;
-    white-space: nowrap;
-}
-
-/* qna-list-tbl-badge-done : 답변완료 배지 */
-.qna-list-tbl-badge-done {
-    background: #6c7fe8;
-    color: white;
-}
-
-/* qna-list-tbl-badge-wait : 답변대기 배지 */
-.qna-list-tbl-badge-wait {
-    background: #e8e8e8;
-    color: #666;
-}
-
-/* qna-list-top-actions : 글쓰기 버튼 + 정렬 드롭다운 세로 묶음 */
-.qna-list-top-actions {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 8px;
 }
 
 .qna-list-sort-sel {
     border: 1px solid #ccc;
     border-radius: 20px;
-    padding: 5px 28px 5px 14px;
+    padding: 5px 14px;
     font-size: 12px;
     cursor: pointer;
     background: #fff;
     color: #333;
+    width: 100px;
 }
 
-/* qna-list-pg : 페이지네이션 (pg = pagination 축약) */
+.qna-list-sort-sel:focus {
+    outline: none;
+    border-color: #6c7fe8;
+}
+
+.qna-list-tbl {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 4px;
+}
+
+/* 열 순서: 번호 | 제목 | 기업명 | 작성일 | 조회 | (빈칸) */
+.qna-list-tbl-row {
+    display: flex;
+    align-items: center;
+    padding: 10px 8px;
+    border-bottom: 1px solid #eee;
+    gap: 8px;
+}
+
+/* qna-list-tbl-header : 헤더 행 */
+.qna-list-tbl-header {
+    font-size: 12px;
+    font-weight: 600;
+    color: #888;
+    background: #fafafa;
+    border-bottom: 2px solid #ddd;
+    cursor: default;
+}
+
+/* qna-list-tbl-notice : 공지 행 */
+.qna-list-tbl-notice {
+    background: #fffbe6;
+    font-weight: 700;
+    cursor: default;
+}
+
+.qna-list-tbl-num {
+    flex: 0 0 60px;
+    text-align: center;
+    color: #aaa;
+}
+
+.qna-list-tbl-title {
+    flex: 1;
+}
+
+.qna-list-tbl-company {
+    flex: 0 0 100px;
+    text-align: center;
+}
+
+.qna-list-tbl-date {
+    flex: 0 0 80px;
+    text-align: center;
+}
+
+.qna-list-tbl-views {
+    flex: 0 0 50px;
+    text-align: center;
+}
+
+/* qna-list-tbl-row 클릭 가능한 행 hover */
+.qna-list-tbl-row:not(.qna-list-tbl-header):not(.qna-list-tbl-notice):hover {
+    background: #f5f7ff;
+    cursor: pointer;
+}
+
+/* 기업명 열 */
+.qna-list-tbl-row>div:nth-child(3) {
+    flex: 0 0 100px;
+    text-align: center;
+}
+
+/* qna-list-pg : 페이지네이션 */
 .qna-list-pg {
     display: flex;
     justify-content: center;
-    gap: 6px;
-    margin: 16px 0 24px;
+    align-items: center;
+    gap: 16px;
+    margin: 20px 0;
 }
 
 .qna-list-pg button {
     background: none;
     border: none;
     font-size: 14px;
-    padding: 4px 8px;
-    border-radius: 4px;
+    color: #333;
     cursor: pointer;
-    color: #555;
+    padding: 2px 0;
+    font-family: inherit;
 }
 
-/* qna-list-pg-active : 현재 페이지 버튼 */
-.qna-list-pg-active {
-    color: #6c7fe8 !important;
-    font-weight: 700;
+.qna-list-pg button:hover {
+    color: #6c7fe8;
 }
 
-.qna-list-pg button:hover:not(.qna-list-pg-active) {
-    background: #eef0ff;
+/* active : 현재 페이지 — 파란색 + 밑줄 */
+.qna-list-pg button.active {
+    color: #6c7fe8;
+    font-weight: 600;
+    border-bottom: 2px solid #6c7fe8;
 }
 
 .qna-list-pg button:disabled {
@@ -222,7 +201,7 @@ body {
     flex: 1;
 }
 
-/* qna-list-search-btn : 검색 버튼 */
+/* qna-list-search-btn : 검색/글쓰기 버튼 */
 .qna-list-search-btn {
     border: 1px solid #ccc;
     background: #fff;
@@ -232,6 +211,8 @@ body {
     cursor: pointer;
     text-decoration: none;
     color: #333;
+    width: 100px;
+    text-align: center;
 }
 
 .qna-list-search-btn:hover {

@@ -12,6 +12,10 @@ body {
     line-height: 1.6;
 }
 
+header {
+    height : 166px;
+}
+
 /* qna-btn-primary : 주요 액션 버튼 (공통) */
 .qna-btn-primary {
     background: #6c7fe8;
