@@ -24,7 +24,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <!-- 실제로 Noto Sans KR과 Poppins 폰트의 스타일시트를 가져와 페이지에 적용함. -->
 
-    <link rel="stylesheet" href="../../../../assets/css/main/header/header.css" />
+    <link rel="stylesheet" href="../../../assets/css/main/header/header.css" />
     <!-- 앞서 작성한 외부 CSS 파일(header.css)을 불러와서 크기, 색상, 배치 등 디자인을 결정함. -->
 </head>
 
@@ -40,7 +40,7 @@
             <h1 class="logo">
                 <!-- 페이지에서 가장 최상위 제목을 의미하며, 보통 로고 영역에 사용해 SEO(검색엔진 최적화) 가중치를 부여함. -->
 
-                <a href="메인페이지_주소.html" class="logo-link" aria-label="CyberCareerCatch 홈">
+                <a href="../mainpage/mainpage.html" class="logo-link" aria-label="CyberCareerCatch 홈">
                     <!-- 클릭 시 지정된 경로로 이동시키는 하이퍼링크 태그임. aria-label은 시각 장애인용 스크린 리더기가 읽을 텍스트를 지정함. -->
 
                     <span class="logo-strong">C</span><span class="logo-soft">yber</span>
@@ -63,26 +63,27 @@
                         <!-- 이 텍스트를 클릭했을 때, 하단에 정의된 JS 함수(toggleDropdown)를 즉시 실행하라는 이벤트 리스너(트리거)가 포함되어 있음. -->
 
                         <ul class="dropdown-menu job-menu">
+                            <li><a href="../mainpage/mainpage.html">직군 검사</a></li>
                             <!-- '직군검사' 메뉴 하위에 종속된 서브 메뉴 리스트임. CSS에서 숨겨두었다가 자바스크립트가 개입하면 나타남. -->
 
-                            <li><a href="보안컨설팅_페이지주소.html">보안컨설팅</a></li>
+                            <li><a href="../roadmap/roadmap-questionnaire1.html">보안컨설팅</a></li>
                             <!-- 각 서브 메뉴 항목이며, href 속성에 정의된 특정 페이지 주소로 이동을 수행함. -->
-                            <li><a href="시스템엔지니어_페이지주소.html">시스템/네트워크/엔지니어</a></li>
-                            <li><a href="보안관제_페이지주소.html">보안관제</a></li>
-                            <li><a href="디지털포렌식_페이지주소.html">침해사고/디지털포렌식</a></li>
+                            <li><a href="../roadmap/roadmap-questionnaire2.html">시스템/네트워크/엔지니어</a></li>
+                            <li><a href="../roadmap/roadmap-questionnaire3.html">보안관제</a></li>
+                            <li><a href="../roadmap/roadmap-questionnaire4.html">침해사고/디지털포렌식</a></li>
                         </ul>
                     </li>
 
                     <li class="nav-item">
-                        <a href="기업홍보_페이지주소.html" class="nav-link">기업홍보</a>
+                        <a href="../company/company-ad.html" class="nav-link">기업홍보</a>
                     </li>
 
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link" onclick="toggleDropdown(event)">커뮤니티</a>
                         <ul class="dropdown-menu community-menu">
-                            <li><a href="자유게시판_페이지주소.html">자유게시판</a></li>
-                            <li><a href="기업QnA_페이지주소.html">기업QnA</a></li>
-                            <li><a href="박람회일정_페이지주소.html">박람회일정</a></li>
+                            <li><a href="../community/post-list.html">자유게시판</a></li>
+                            <li><a href="../qna/qna-list.html">기업QnA</a></li>
+                            <li><a href="../expo/expo-calendar.html">박람회일정</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -91,7 +92,7 @@
             <div class="auth-area">
                 <!-- 두 개의 버튼(로그인, 회원가입)을 하나의 묶음으로 처리하여 헤더 우측 끝에 배치하기 위한 컨테이너임. -->
 
-                <a href="로그인_페이지주소.html" class="auth-btn">
+                <a href="../account/login.html" class="auth-btn">
                     <svg class="login-icon" viewBox="0 0 24 24" aria-hidden="true">
                         <!-- 수학적 좌표로 그려지는 벡터 그래픽 렌더링 태그(아이콘)임. aria-hidden="true"로 스크린 리더기가 읽지 않고 넘어가게 함. -->
                         <path d="M12 12a4.25 4.25 0 1 0-4.25-4.25A4.25 4.25 0 0 0 12 12Zm0 1.75c-4.14 0-7.5 2.52-7.5 5.63A1.12 1.12 0 0 0 5.63 20.5h12.74A1.12 1.12 0 0 0 19.5 19.38C19.5 16.27 16.14 13.75 12 13.75Z" fill="currentColor"/>
@@ -99,7 +100,7 @@
                     <span>로그인</span>
                 </a>
                 
-                <a href="회원가입_페이지주소.html" class="auth-btn">회원가입</a>
+                <a href="../account/signup.html" class="auth-btn">회원가입</a>
             </div>
 
         </div>
