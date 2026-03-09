@@ -8,10 +8,9 @@
 </head>
 
 <body class="qna-body">
-
     <div class="qna-container">
 
-        <!-- 상단 헤더 -->
+        <!-- 상단 -->
         <header class="qna-top">
             <div class="qna-title">관리자 페이지</div>
             <nav class="qna-menu">
@@ -24,33 +23,28 @@
 
         <!-- 메인 영역 -->
         <main class="qna-main">
-            <!-- 왼쪽 사이드 메뉴 -->
+
+            <!-- 왼쪽 메뉴 -->
             <aside class="qna-leftbar">
-                <div class="qna-left-item">
-                    <a href="./expo-schedule.html">박람회 일정</a>
-                </div>
-                <div class="qna-left-item">
-                    <a href="./community-management.html">자유 게시판</a>
-                </div>
-                <div class="qna-left-item qna-active">
-                    <a href="./company-qna.html">기업 QnA</a>
-                </div>
+                <div class="qna-left-item"><a href="./expo-schedule.html">박람회 일정</a></div>
+                <div class="qna-left-item"><a href="./community-management.html">자유 게시판</a></div>
+                <div class="qna-left-item qna-active"><a href="./company-qna.html">기업 QnA</a></div>
             </aside>
 
             <!-- 오른쪽 콘텐츠 -->
             <section class="qna-content">
 
-                <!-- 공지 -->
+       
                 <h2 class="qna-notice-title">기업 QnA공지</h2>
-                <div id="notice-box" contenteditable="true" placeholder="공지 내용을 입력하세요..."></div>
+                <textarea id="notice-box" placeholder="공지 내용을 입력하세요..."></textarea>
                 <div class="qna-notice-btn">
                     <button id="notice-btn">수정</button>
                 </div>
 
-                <!-- Q&A 제목 -->
+        
                 <h2 class="qna-title">기업 Q&A</h2>
 
-                <!-- 기업 선택 -->
+   
                 <div class="qna-filter">
                     <select>
                         <option>기업선택</option>
@@ -60,8 +54,9 @@
                     </select>
                 </div>
 
-                <!-- Q&A 테이블 -->
+             
                 <div class="qna-table">
+
                     <div class="qna-row qna-head">
                         <div class="col1">번호</div>
                         <div class="col2">제목</div>
@@ -71,7 +66,7 @@
                         <div class="col6">삭제여부</div>
                     </div>
 
-                    <!-- QnA 행 65 ~ 56 -->
+                  
                     <div class="qna-row">
                         <div class="col1">65</div>
                         <div class="col2"><a href="#">“충격” 김진욱, 머리피다!!!</a></div>
@@ -155,7 +150,7 @@
 
                 </div>
 
-                <!-- 페이지 -->
+              
                 <div class="qna-page">
                     <span>&lt;&lt;</span>
                     <span>&lt;</span>
@@ -168,7 +163,7 @@
                     <span>&gt;&gt;</span>
                 </div>
 
-                <!-- 삭제 -->
+        
                 <div class="qna-delete">
                     <button id="delete-btn">삭제</button>
                 </div>
@@ -177,7 +172,6 @@
         </main>
     </div>
 
-    <script src="/assets/js/admin/main-management/company-qna.js"></script>
 </body>
 
 </html>

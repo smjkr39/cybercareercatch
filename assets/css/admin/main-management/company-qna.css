@@ -5,23 +5,22 @@ html {
     font-family: Arial, sans-serif;
 }
 
-/* 클래스 축약 */
 .qna-body {
-    margin: 0;
     background: #fff;
 }
 
 .qna-container {
     width: 1300px;
     margin: 40px auto;
-    background: #c9cfe0;
     padding: 30px;
+    background: #c9cfe0;
 }
 
+/* 상단 */
 .qna-top {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
 }
 
 .qna-title {
@@ -59,12 +58,14 @@ html {
     background: #dcdcdc;
 }
 
+/* 메인 */
 .qna-main {
     display: flex;
     margin-top: 30px;
     gap: 20px;
 }
 
+/* 왼쪽 메뉴 */
 .qna-leftbar {
     width: 200px;
     background: #adbbdb;
@@ -93,6 +94,7 @@ html {
     user-select: none;
 }
 
+/* 오른쪽 콘텐츠 */
 .qna-content {
     flex: 1;
     background: white;
@@ -107,15 +109,11 @@ html {
 #notice-box {
     width: 700px;
     height: 200px;
-    background: #e6e6e6;
     padding: 10px;
-    overflow-y: auto;
     border-radius: 4px;
-}
-
-#notice-box:empty:before {
-    content: attr(placeholder);
-    color: #888;
+    border: 1px solid #ccc;
+    resize: none;
+    font-size: 16px;
 }
 
 .qna-notice-btn {
@@ -133,13 +131,13 @@ html {
     cursor: pointer;
 }
 
-/* 제목 */
+/* Q&A 제목 */
 .qna-title {
     margin-top: 70px;
     margin-bottom: 20px;
 }
 
-/* 기업 선택 */
+
 .qna-filter {
     margin-bottom: 20px;
 }
@@ -150,20 +148,23 @@ html {
     border-radius: 5px;
 }
 
-/* 테이블 */
+
 .qna-table {
-    width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .qna-row {
     display: flex;
     padding: 12px 0;
     border-bottom: 1px solid #ddd;
+    align-items: center;
 }
 
 .qna-head {
     font-weight: bold;
     border-top: 2px solid #333;
+    background: #f1f1f1;
 }
 
 .col1 {
@@ -191,7 +192,7 @@ html {
     text-align: center;
 }
 
-/* 페이지 */
+
 .qna-page {
     display: flex;
     justify-content: center;
@@ -208,7 +209,7 @@ html {
     font-weight: bold;
 }
 
-/* 삭제 버튼 */
+
 .qna-delete {
     display: flex;
     justify-content: flex-end;
