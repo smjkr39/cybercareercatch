@@ -1,52 +1,56 @@
-.companyInfo-body{
-    margin:0;
-    background:#ffffff;
+.companyInfo-body {
+    margin: 0;
+    background: #ffffff;
 }
 
-.companyInfo-ctr{
-    width:1300px;
-    margin:40px auto;
-    background:#c9cfe0;
-    padding:30px;
+.companyInfo-ctr {
+    width: 1300px;
+    margin: 40px auto;
+    background: #c9cfe0;
+    padding: 30px;
 }
 
 /* header */
 
-.companyInfo-hdr{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
+.companyInfo-hdr {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.companyInfo-title{
-    background:#6b83d6;
-    color:white;
-    padding:10px 20px;
-    border-radius:6px;
-    font-weight:bold;
+.companyInfo-title {
+    background: #6b83d6;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-weight: bold;
 }
 
-.companyInfo-nav{
-    display:flex;
-    gap:40px;
+.companyInfo-nav {
+    display: flex;
+    gap: 40px;
 }
 
-.companyInfo-nav a{
-    background:#6b83d6;
-    color:white;
-    padding:10px 25px;
-    border-radius:6px;
-    text-decoration:none;
+.companyInfo-nav a {
+    background: #6b83d6;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 6px;
+    text-decoration: none;
 }
 
-.companyInfo-nav a:hover{
-    background:#5569c1;
+.companyInfo-nav a:hover {
+    background: #5569c1;
 }
 
-.companyInfo-main{
-    display:flex;
-    margin-top:30px;
-    gap:20px;
+.companyInfo-main {
+    display: flex;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.companyInfo-main form {
+    flex: 1;
 }
 
 .companyInfo-leftbar {
@@ -55,144 +59,146 @@
     padding-top: 20px;
 }
 
-/* 기본 메뉴 */
+
 .companyInfo-left-item {
     padding: 20px;
     margin-bottom: 10px;
     text-align: center;
     cursor: pointer;
-    background: #adbbdb; /* 기본 하늘색 */
+    background: #adbbdb;
 }
 
-/* 링크 */
+
 .companyInfo-left-item a {
-    color: black;           
-    text-decoration: none;  
+    color: black;
+    text-decoration: none;
     display: block;
 }
 
-/* hover */
+
 .companyInfo-left-item:hover {
     background: #949fca;
 }
+
 .companyInfo-left-item:hover a {
     color: white;
 }
 
-/* 클릭(활성화) 메뉴 */
+
 .companyInfo-left-item.companyInfo-active {
     background: #8a8a8a;
 }
+
 .companyInfo-left-item.companyInfo-active a {
     color: white;
     font-weight: 700;
 }
 
-.companyInfo-ct{
-    flex:1;
-    background:white;
-    padding:40px;
+.companyInfo-ct {
+    flex: 1;
+    background: white;
+    padding: 40px;
 }
 
-/* search */
 
-.companyInfo-search{
-    display:flex;
-    justify-content:center;
-    gap:10px;
-    margin-bottom:40px;
+
+.companyInfo-search {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
 }
 
-.companyInfo-search input{
-    width:250px;
-    height:40px;
-    border-radius:20px;
-    border:none;
-    background:#ddd;
-    text-align:center;
+.companyInfo-search input {
+    width: 250px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    background: #ddd;
+    text-align: center;
 }
 
-.companyInfo-search button{
-    background:#6b83d6;
-    color:white;
-    border:none;
-    padding:10px 20px;
-    border-radius:6px;
-    cursor:pointer;
+.companyInfo-search button {
+    background: #6b83d6;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
 }
 
 /* table */
 
-.companyInfo-tblHead{
-    display:flex;
-    font-weight:bold;
-    margin-bottom:10px;
+.companyInfo-tblHead {
+    display: flex;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
-.companyInfo-row{
-    display:flex;
-    padding:15px 0;
-    border-bottom:1px solid #eee;
+.companyInfo-row {
+    display: flex;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
 }
 
 /* column */
 
-.col1{
-    width:80px;
-    text-align:center;
+.col1 {
+    width: 80px;
+    text-align: center;
 }
 
-.col2{
-    width:100px;
-    text-align:center;
+.col2 {
+    width: 100px;
+    text-align: center;
 }
 
-.col3{
-    flex:1;
-    text-align:center;
+.col3 {
+    flex: 1;
+    text-align: center;
 }
 
-.col4{
-    width:120px;
-    text-align:center;
+.col4 {
+    width: 120px;
+    text-align: center;
 }
 
-.col5{
-    width:150px;
-    text-align:center;
+.col5 {
+    width: 150px;
+    text-align: center;
 }
 
 /* pagination */
 
-.companyInfo-page{
-    display:flex;
-    justify-content:center;
-    gap:10px;
-    margin-top:40px;
+.companyInfo-page {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 40px;
 }
 
-.companyInfo-page span{
-    cursor:pointer;
+.companyInfo-page span {
+    cursor: pointer;
 }
 
-.companyInfo-page .active{
-    color:#4c6ef5;
-    font-weight:bold;
+.companyInfo-page .active {
+    color: #4c6ef5;
+    font-weight: bold;
 }
 
 /* delete */
 
-.companyInfo-del{
-    display:flex;
-    justify-content:flex-end;
-    margin-top:30px;
+.companyInfo-del {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
 }
 
-.companyInfo-del button{
-    background:#d87c7c;
-    color:white;
-    border:none;
-    padding:10px 25px;
-    border-radius:6px;
-    cursor:pointer;
+.companyInfo-del button {
+    background: #d87c7c;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 6px;
+    cursor: pointer;
 }

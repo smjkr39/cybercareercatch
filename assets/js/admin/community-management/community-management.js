@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
             noticeBtn.textContent = "수정";
             alert("공지사항이 저장되었습니다.");
 
-       
+
             const firstRow = table.querySelector(".qnaMgmt-row:not(.qnaMgmt-head)");
             let existingNotice = table.querySelector(".qnaMgmt-noticeRow");
 
@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <div class="col1">공지</div>
                     <div class="col2">${content}</div>
                     <div class="col3">관리자</div>
-                    <div class="col4">${new Date().toISOString().slice(0,6).replace('-','')}</div>
+                    <div class="col4">${new Date().toISOString().slice(0, 6).replace('-', '')}</div>
                     <div class="col5"></div>
                 `;
                 table.insertBefore(noticeRow, firstRow);
@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
         pageSpans.forEach(span => span.classList.remove("active"));
         const span = Array.from(pageSpans).find(s => parseInt(s.textContent) === page);
-        if(span) span.classList.add("active");
+        if (span) span.classList.add("active");
         currentPage = page;
     }
 
@@ -111,8 +111,8 @@ document.addEventListener("DOMContentLoaded", function () {
             const text = span.textContent.trim();
             const totalPages = Math.ceil(rows.length / rowsPerPage);
             if (text === "<<") { showPage(1); return; }
-            if (text === "<") { showPage(Math.max(1, currentPage -1)); return; }
-            if (text === ">") { showPage(Math.min(totalPages, currentPage +1)); return; }
+            if (text === "<") { showPage(Math.max(1, currentPage - 1)); return; }
+            if (text === ">") { showPage(Math.min(totalPages, currentPage + 1)); return; }
             if (text === ">>") { showPage(totalPages); return; }
             const pageNum = parseInt(text);
             if (!isNaN(pageNum)) { showPage(pageNum); }

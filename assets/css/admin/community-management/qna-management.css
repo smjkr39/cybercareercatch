@@ -46,7 +46,10 @@
     margin-top: 30px;
 }
 
-/* 왼쪽 메뉴 */
+.qnaMgmt-main form {
+    flex: 1;
+}
+
 .qna-leftbar {
     width: 200px;
     background: #adbbdb;
@@ -58,29 +61,29 @@
     margin-bottom: 10px;
     text-align: center;
     cursor: pointer;
-    background: #adbbdb; 
+    background: #adbbdb;
 }
 
 .qna-left-item a {
-    color: black;       
-    text-decoration: none;  
+    color: black;
+    text-decoration: none;
     display: block;
 }
 
 .qna-left-item:hover {
-    background: #949fca; 
+    background: #949fca;
 }
 
 .qna-left-item:hover a {
-    color: white;          
+    color: white;
 }
 
 .qna-left-item.qna-active {
-    background: #8a8a8a;   
+    background: #8a8a8a;
 }
 
 .qna-left-item.qna-active a {
-    color: white;           
+    color: white;
     font-weight: 700;
 }
 

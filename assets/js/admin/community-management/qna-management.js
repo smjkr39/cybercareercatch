@@ -1,8 +1,8 @@
-document.addEventListener("DOMContentLoaded", function(){
+document.addEventListener("DOMContentLoaded", function () {
 
     const questions = document.querySelectorAll(".qnaMgmt-qItem");
 
-    questions.forEach(function(question){
+    questions.forEach(function (question) {
 
         const input = question.querySelector("input");
 
@@ -12,10 +12,10 @@ document.addEventListener("DOMContentLoaded", function(){
 
         let savedValue = "";
 
-  
-        checkBtn.addEventListener("click", function(){
 
-            if(input.value.trim() === ""){
+        checkBtn.addEventListener("click", function () {
+
+            if (input.value.trim() === "") {
                 alert("내용을 입력하세요.");
                 return;
             }
@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
         });
 
-        editBtn.addEventListener("click", function(){
+        editBtn.addEventListener("click", function () {
 
             input.disabled = false;
 
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
         });
 
-        cancelBtn.addEventListener("click", function(){
+        cancelBtn.addEventListener("click", function () {
 
             input.value = savedValue;
 
