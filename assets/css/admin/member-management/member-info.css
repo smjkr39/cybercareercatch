@@ -1,209 +1,198 @@
-.body{
+.member-info-body{
 margin:0;
 background:#ffffff;
-/**/font-family:sans-serif;
 }
-.container{
-margin:40px auto;
-padding:30px;
+
+.member-info-container{
 width:1300px;
+margin:40px auto;
 background:#c9cfe0;
+padding:30px;
 }
 
-
-/* -------------------------상단 헤더-------------------- */
-/* .top{
+.member-info-header{
 display:flex;
 align-items:center;
 justify-content:space-between;
-} */
-/* 로그아웃 버튼 */
-.justlogout{
-  display:flex;
 }
-.logout{
-background:#f2f2f2;
+
+/* 기존 div 스타일 유지 */
+.member-info-title {
+    background:#6b83d6;
+    color:white;          /* 이건 a의 글씨 색에도 적용될 예정 */
+    padding:10px 20px;
+    border-radius:6px;
+    font-weight:bold;
+    cursor:pointer;
+    display:inline-block; /* a가 안 깨지도록 */
+}
+
+/* a 태그 스타일 초기화 + div 스타일과 동일하게 */
+.member-info-title a {
+    color: inherit;       /* div의 color 상속 */
+    text-decoration: none; /* 밑줄 제거 */
+    display:block;        /* div 안에서 영역 전체 클릭 가능 */
+    width:100%;
+    height:100%;
+}
+.member-info-menu{
+display:flex;
+gap:40px;
+}
+
+.member-info-menu a{
+background:#6b83d6;
+color:white;
+padding:10px 25px;
+border-radius:6px;
+text-decoration:none;
+}
+
+.member-info-menu a:hover{
+background:#5569c1;
+}
+
+.member-info-logout{
 padding:6px 12px;
-margin-left: auto;
-/**/cursor:pointer;
-/**/border:1px solid #888;
-/**/border-radius:8px;
+cursor:pointer;
 }
-/**/.logout:hover{
+
+.member-info-logout:hover{
 background:#dcdcdc;
-}/*조금은 내 생각관 다름 그치만 좋은 듯*/
+}
 
-
-
-
-
-/* 왼쪽 영역 */
-.header-left{
+.member-info-main{
 display:flex;
-gap:30px;/*공통으로 맞출것*/
-/**/align-items:center;
+margin-top:30px;
+gap:20px;
 }
-
-/*관리자페이지*/
-.title{
-width:150px;/*공통으로 맞출것*/
-background:#6b83d6;
-color:white;
-text-align: center;
-margin-bottom: 20px;/*이것만 밑에랑 간격띄게끔*/
-/**/padding:12px 35px;/*공통으로 맞출것*/
-box-sizing: content-box;/*공통으로 맞출것*/
-/**/border-radius:8px;
-/**/font-weight:bold;
-}
-
-/*메뉴모음집*/
-.menu1{
-flex:1;
-display:flex;/*이걸 써야 밑(자식)에께 의미가 있어짐*/
-/* gap:350px;이거 간격 !!!!!!!! 조정해볼것!!!!!!!! */
-/**/justify-content:space-around;
-background:#6b83d6;
-margin-bottom: 20px;/*이것만 밑에랑 간격띄게끔*/
-/**/padding:12px 35px;/*공통으로 맞출것*/
-/**/border-radius:8px;
-}
-.menu1 a{
-color:white;
-text-decoration:none;/*밑줄제거*/
-/**/font-weight:bold;
-}
-
-
-
-
-
-
-
-/* ----------------------메인 영역 ---------------------*/
-.main{
-display:flex;
-gap:30px;
-/**//* margin-top:20px; */
-}
-
-
 
 /* 왼쪽 사이드바 */
-.m-leftbar{
-width:220px;/*140+35+35*/
+
+.member-info-sidebar{
+width:200px;
 background:#adbbdb;
-box-sizing: content-box;
+padding-top:20px;
 }
 
-.aaa{
-background:#8a8a8a;
-color:white;
-font-weight:700;
-/*?*/cursor:default;
-/*?*/user-select:none;
-}
-.m-left-item{
+.member-info-sidebar-item{
+padding:20px;
 margin-bottom:10px;
 text-align:center;
-border-radius:4px;
-color:#222;
-/**/padding:12px 35px;/*공통으로 맞출것*//*이게 킥*/
-/*?*/cursor:pointer;
+cursor:pointer;
+background:#adbbdb;
 }
-.m-left-item:hover{
+
+.member-info-sidebar-item a{
+color:black;
+text-decoration:none;
+display:block;
+}
+
+.member-info-sidebar-item:hover{
 background:#949fca;
+}
+
+.member-info-sidebar-item:hover a{
 color:white;
 }
 
+.member-info-sidebar-item.member-info-active{
+background:#8a8a8a;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* 오른쪽 콘텐츠
-
-.qnaManagement-content{
-flex:1;
-background:white;
-min-height:500px;
-padding:30px;
-} */
-
+.member-info-sidebar-item.member-info-active a{
+color:white;
+font-weight:700;
+}
 
 
 /* 오른쪽 콘텐츠 */
 
-.m-right{
+.member-info-content{
 flex:1;
 background:white;
-
-/**/padding:12px 35px;/*공통으로 맞출것*/
-/* height: 1300px;테스트 였던거임 */
+padding:12px 35px;
 }
-
-
 
 
 /* 제목 */
 
-.content-title{
+.member-info-content-title{
 margin-bottom:20px;
 }
 
 
 /* 검색 영역 */
 
-.search-box{
+.member-info-search-box{
 display:flex;
 align-items:center;
 gap:10px;
 margin-bottom:20px;
 }
 
-.search-box select,
-.search-box input{
+.member-info-search-select,
+.member-info-search-input{
 padding:5px;
 }
 
-.search-btn{
+.member-info-search-btn{
 padding:5px 10px;
 cursor:pointer;
 }
 
 
-/* 테이블 */
+/* 리스트 (table 대체) */
 
-.member-table{
+.member-info-table{
 width:100%;
-border-collapse:collapse;
+border-top:2px solid #ccc;
+}
+
+.member-info-table-header{
+display:flex;
+border-bottom:2px solid #ccc;
+background:#f5f5f5;
+font-weight:bold;
 text-align:center;
 }
 
-.member-table th{
-border-bottom:2px solid #ccc;
-padding:10px;
+.member-info-row{
+display:flex;
+border-bottom:1px solid #eee;
+text-align:center;
 }
 
-.member-table td{
+.member-info-col{
 padding:10px;
-border-bottom:1px solid #eee;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+/* 컬럼 너비 */
+
+.member-info-col-num{
+width:80px;
+}
+
+.member-info-col-id{
+width:220px;
+}
+
+.member-info-col-name{
+flex:1;
+}
+
+.member-info-col-manage{
+width:120px;
 }
 
 
 /* 삭제 버튼 */
 
-.delete-btn{
+.member-info-delete-btn{
 background:#f26c6c;
 border:none;
 color:white;
@@ -212,24 +201,24 @@ border-radius:4px;
 cursor:pointer;
 }
 
-.delete-btn:hover{
+.member-info-delete-btn:hover{
 background:#e05555;
 }
 
 
 /* 페이지네이션 */
 
-.pagination{
+.member-info-pagination{
 margin-top:25px;
 text-align:center;
 }
 
-.pagination span,
-.pagination a{
+.member-info-pagination span,
+.member-info-page{
 margin:0 6px;
 cursor:pointer;
 }
 
-.pagination .active{
+.member-info-page-active{
 font-weight:bold;
 }

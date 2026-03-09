@@ -1,31 +1,23 @@
-/* 전체 배경 */
-
-.member-infodetail-body{
+.recruiter-infodetail-body{
 margin:0;
 background:#ffffff;
 }
 
-
-/* 전체 컨테이너 */
-
-.member-infodetail-container{
+.recruiter-infodetail-container{
 width:1300px;
 margin:40px auto;
 background:#c9cfe0;
 padding:30px;
 }
 
-
-/* 상단 헤더 */
-
-.member-infodetail-header{
+.recruiter-infodetail-header{
 display:flex;
 align-items:center;
 justify-content:space-between;
 }
 
 /* 기존 div 스타일 유지 */
-.member-infodetail-title {
+.recruiter-infodetail-title {
     background:#6b83d6;
     color:white;          /* 이건 a의 글씨 색에도 적용될 예정 */
     padding:10px 20px;
@@ -36,23 +28,19 @@ justify-content:space-between;
 }
 
 /* a 태그 스타일 초기화 + div 스타일과 동일하게 */
-.member-infodetail-title a {
+.recruiter-infodetail-title a {
     color: inherit;       /* div의 color 상속 */
     text-decoration: none; /* 밑줄 제거 */
     display:block;        /* div 안에서 영역 전체 클릭 가능 */
     width:100%;
     height:100%;
 }
-
-
-/* 상단 메뉴 */
-
-.member-infodetail-menu{
+.recruiter-infodetail-menu{
 display:flex;
 gap:40px;
 }
 
-.member-infodetail-menu a{
+.recruiter-infodetail-menu a{
 background:#6b83d6;
 color:white;
 padding:10px 25px;
@@ -60,40 +48,33 @@ border-radius:6px;
 text-decoration:none;
 }
 
-.member-infodetail-menu a:hover{
+.recruiter-infodetail-menu a:hover{
 background:#5569c1;
 }
 
-
-/* 로그아웃 */
-
-.member-infodetail-logout{
+.recruiter-infodetail-logout{
 padding:6px 12px;
 }
 
-.member-infodetail-logout:hover{
+.recruiter-infodetail-logout:hover{
 background:#dcdcdc;
 }
 
-
-/* 메인 영역 */
-
-.member-infodetail-main{
+.recruiter-infodetail-main{
 display:flex;
 margin-top:30px;
 gap:20px;
 }
 
+/* 왼쪽 사이드바 */
 
-/* 사이드바 */
-
-.member-infodetail-sidebar{
+.recruiter-infodetail-sidebar{
 width:200px;
 background:#adbbdb;
 padding-top:20px;
 }
 
-.member-infodetail-sidebar-item{
+.recruiter-infodetail-sidebar-item{
 padding:20px;
 margin-bottom:10px;
 text-align:center;
@@ -101,25 +82,25 @@ cursor:pointer;
 background:#adbbdb;
 }
 
-.member-infodetail-sidebar-item a{
+.recruiter-infodetail-sidebar-item a{
 color:black;
 text-decoration:none;
 display:block;
 }
 
-.member-infodetail-sidebar-item:hover{
+.recruiter-infodetail-sidebar-item:hover{
 background:#949fca;
 }
 
-.member-infodetail-sidebar-item:hover a{
+.recruiter-infodetail-sidebar-item:hover a{
 color:white;
 }
 
-.member-infodetail-sidebar-item.member-infodetail-active{
+.recruiter-infodetail-sidebar-item.recruiter-infodetail-active{
 background:#8a8a8a;
 }
 
-.member-infodetail-sidebar-item.member-infodetail-active a{
+.recruiter-infodetail-sidebar-item.recruiter-infodetail-active a{
 color:white;
 font-weight:700;
 }
@@ -127,31 +108,27 @@ font-weight:700;
 
 /* 오른쪽 콘텐츠 */
 
-.member-infodetail-content{
+.recruiter-infodetail-content{
 flex:1;
 background:#f5f5f5;
 padding:12px 35px;
 }
 
+/* 상단 제목 */
 
-/* 상단 제목 영역 */
-
-.member-infodetail-section-header{
+.recruiter-infodetail-section-header{
+margin-bottom:20px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-margin-bottom:20px;
 }
 
-.member-infodetail-section-title{
-font-size:20px;
+.recruiter-infodetail-section-title{
+font-size:18px;
 font-weight:bold;
 }
 
-
-/* 목록 이동 버튼 */
-
-.member-infodetail-move-btn{
+.recruiter-infodetail-move-btn{
 background:#7a88f0;
 color:white;
 border:none;
@@ -160,61 +137,43 @@ border-radius:5px;
 cursor:pointer;
 }
 
-.member-infodetail-move-btn:hover{
-background:#5f6de0;
-}
+/* 회원 정보 */
 
-
-/* 회원 정보 영역 */
-
-.member-infodetail-info{
+.recruiter-infodetail-info{
 width:100%;
 border:1px solid #ccc;
+background:white;
 }
 
-
-/* 정보 한 줄 */
-
-.member-infodetail-row{
+.recruiter-infodetail-row{
 display:flex;
 border-bottom:1px solid #ccc;
 }
 
-.member-infodetail-row:last-child{
+.recruiter-infodetail-row:last-child{
 border-bottom:none;
 }
 
-
-/* 라벨 */
-
-.member-infodetail-label{
+.recruiter-infodetail-label{
 width:180px;
 background:#e5e5e5;
 padding:12px;
 font-weight:bold;
 }
 
-
-/* 값 */
-
-.member-infodetail-value{
+.recruiter-infodetail-value{
 flex:1;
 padding:12px;
-background:white;
 }
-
 
 /* 로그인 업데이트 */
 
-.member-infodetail-update{
+.recruiter-infodetail-update{
 margin-top:20px;
 font-weight:bold;
 }
 
-
-/* 날짜 박스 */
-
-.member-infodetail-date-box{
+.recruiter-infodetail-date{
 margin-top:10px;
 border:1px solid #ccc;
 padding:10px;
@@ -222,18 +181,14 @@ width:300px;
 background:#eee;
 }
 
+/* 삭제 버튼 */
 
-/* 삭제 버튼 영역 */
-
-.member-infodetail-delete-area{
+.recruiter-infodetail-delete-area{
 text-align:right;
 margin-top:80px;
 }
 
-
-/* 삭제 버튼 */
-
-.member-infodetail-delete-btn{
+.recruiter-infodetail-delete-btn{
 background:#ff6a6a;
 border:none;
 color:white;
@@ -242,11 +197,6 @@ border-radius:4px;
 cursor:pointer;
 }
 
-.member-infodetail-delete-btn:hover{
-background:#e04848;
+.recruiter-infodetail-delete-btn:hover{
+background:#e05555;
 }
-
-
-/* 삭제 버튼 */ /* .delete-area{ text-align:right; margin-top:80px; }
- .approve{ background:#1c33e6; color:white; border:none; padding:10px 18px; font-size:18px; border-radius:8px; cursor:pointer; }
-  .reject{ background:#9e9e9e; color:white; border:none; padding:10px 18px; font-size:18px; border-radius:8px; cursor:pointer; } */ 

@@ -6,126 +6,148 @@
 <link rel="stylesheet" href="../../../assets/css/admin/member-management/company-check.css">
 </head>
 
-<body class="body">
-<div class="container">
+<body class="company-check-body">
 
-<!-- 상단 헤더 -->
-<header class="top">
-  <!----><div class="justlogout">
-    <button class="logout">로그아웃</button>
-  </div>
+<div class="company-check-container">
 
-  <div class="header-left">
-    <div class="title">관리자 페이지</div>
-    <nav class="menu1">
-      <a href="#">회원관리</a>
-      <a href="#">메인관리</a>
-      <a href="#">커뮤니티 관리</a>
-    </nav>
-  </div>
+<header class="company-check-header">
 
+<div class="company-check-title">
+ <a href="../admin-main.html">관리자 페이지</a>
+</div>
+
+<nav class="company-check-menu">
+<a href="../member-management/member-info.html">회원 관리</a>
+<a href="../main-management/qna-management.html">메인 관리</a>
+<a href="../community-management/expo-schedule.html">커뮤니티 관리</a>
+</nav>
+
+<button class="company-check-logout">로그아웃</button>
 
 </header>
 
+<main class="company-check-main">
 
-<!-- 메인 영역 -->
-<main class="main">
-<!-- 왼쪽 사이드 메뉴 -->
-<aside class="m-leftbar">
-  <div class="m-left-item">일반 회원 정보 조회</div>
-  <div class="m-left-item">기업 회원 정보 조회</div>
-  <div class="m-left-item aaa">기업회원 승인, 반려</div>
+<!-- 사이드바 -->
+<aside class="company-check-sidebar">
+
+<div class="company-check-sidebar-item">
+<a href="./member-info.html">일반회원 정보 조회</a>
+</div>
+
+<div class="company-check-sidebar-item company-check-active">
+<a href="./company-check.html">기업회원 승인, 반려</a>
+</div>
+
+<div class="company-check-sidebar-item">
+<a href="./recruiter-info.html">기업회원 정보 조회</a>
+</div>
+
 </aside>
 
 
+<!-- 오른쪽 영역 -->
+<section class="company-check-content">
+
+<div class="company-check-title-area">
+<h2>기업회원 승인 및 반려</h2>
+</div>
+
+<div class="company-check-subtitle">
+신규 기업회원가입자 목록
+</div>
 
 
+<!-- 리스트 헤더 -->
+
+<div class="company-check-table">
+
+<div class="company-check-row company-check-head">
+
+<div class="company-check-col number">번호</div>
+<div class="company-check-col id">아이디</div>
+<div class="company-check-col company">기업이름</div>
+<div class="company-check-col date">가입날짜</div>
+<div class="company-check-col status">승인/반려</div>
+
+</div>
 
 
+<!-- 리스트 1 -->
+
+<div class="company-check-row">
+
+<div class="company-check-col number">1</div>
+<div class="company-check-col id">
+<a class="company-check-link" href="#">SsamSsong</a>
+</div>
+<div class="company-check-col company">
+<a class="company-check-link" href="#">쌈쏭쌈싸머거</a>
+</div>
+<div class="company-check-col date">26.02.12</div>
+<div class="company-check-col status">대기</div>
+
+</div>
 
 
+<!-- 리스트 2 -->
+
+<div class="company-check-row">
+
+<div class="company-check-col number">2</div>
+<div class="company-check-col id">HEAJJunBaBo</div>
+<div class="company-check-col company">헤준BABO</div>
+<div class="company-check-col date">26.02.24</div>
+<div class="company-check-col status">대기</div>
+
+</div>
 
 
+<!-- 리스트 3 -->
+
+<div class="company-check-row">
+
+<div class="company-check-col number">3</div>
+<div class="company-check-col id">Jinokispretty</div>
+<div class="company-check-col company">진옥IT</div>
+<div class="company-check-col date">26.02.26</div>
+<div class="company-check-col status">대기</div>
+
+</div>
 
 
+<!-- 리스트 4 -->
+
+<div class="company-check-row">
+
+<div class="company-check-col number">4</div>
+<div class="company-check-col id">adorableJinok</div>
+<div class="company-check-col company">doradora컴퓨터</div>
+<div class="company-check-col date">26.02.28</div>
+<div class="company-check-col status">대기</div>
+
+</div>
 
 
+<!-- 리스트 5 -->
 
+<div class="company-check-row">
 
-
-
-
-
-
-
-<section class="m-right">
-
-<div class="content">
-<div class="titlel"><h2>기업회원 승인 및 반려</h2></div>
-
-
-<div class="subtitle">신규 기업회원가입자 목록</div>
-
-<table>
-
-<tr>
-<th>번호</th>
-<th>아이디</th>
-<th>기업이름</th>
-<th>가입날짜</th>
-<th>승인/반려</th>
-</tr>
-
-<tr>
-<td>1</td>
-<td><a class="link" href="#">SsamSsong</a></td>
-<td><a class="link" href="#">쌈쏭쌈싸머거</a></td>
-<td class="link">26.02.12</td>
-<td class="status">대기</td>
-</tr>
-
-<tr>
-<td>2</td>
-<td>HEAJJunBaBo</td>
-<td>헤준BABO</td>
-<td>26.02.24</td>
-<td>대기</td>
-</tr>
-
-<tr>
-<td>3</td>
-<td>Jinokispretty</td>
-<td>진옥IT</td>
-<td>26.02.26</td>
-<td>대기</td>
-</tr>
-
-<tr>
-<td>4</td>
-<td>adorableJinok</td>
-<td>doradora컴퓨터</td>
-<td>26.02.28</td>
-<td>대기</td>
-</tr>
-
-<tr>
-<td>5</td>
-<td>IWantSleep</td>
-<td>IT솔리드</td>
-<td>26.03.01</td>
-<td>대기</td>
-</tr>
-
-</table>
+<div class="company-check-col number">5</div>
+<div class="company-check-col id">IWantSleep</div>
+<div class="company-check-col company">IT솔리드</div>
+<div class="company-check-col date">26.03.01</div>
+<div class="company-check-col status">대기</div>
 
 </div>
 
 </div>
 
-</div>
+</section>
 
 </main>
 
 </div>
+
 </body>
 </html>

@@ -1,172 +1,224 @@
-.body{
+/* 전체 배경 */
+
+.company-check-body{
 margin:0;
 background:#ffffff;
-/**/font-family:sans-serif;
 }
-.container{
-margin:40px auto;
-padding:30px;
+
+
+/* 전체 컨테이너 */
+
+.company-check-container{
 width:1300px;
+margin:40px auto;
 background:#c9cfe0;
+padding:30px;
 }
 
 
-/* -------------------------상단 헤더-------------------- */
-/* .top{
+/* 상단 헤더 */
+
+.company-check-header{
 display:flex;
 align-items:center;
 justify-content:space-between;
-} */
-/* 로그아웃 버튼 */
-.justlogout{
-  display:flex;
 }
-.logout{
-background:#f2f2f2;
+
+/* 기존 div 스타일 유지 */
+.company-check-title {
+    background:#6b83d6;
+    color:white;          /* 이건 a의 글씨 색에도 적용될 예정 */
+    padding:10px 20px;
+    border-radius:6px;
+    font-weight:bold;
+    cursor:pointer;
+    display:inline-block; /* a가 안 깨지도록 */
+}
+
+/* a 태그 스타일 초기화 + div 스타일과 동일하게 */
+.company-check-title a {
+    color: inherit;       /* div의 color 상속 */
+    text-decoration: none; /* 밑줄 제거 */
+    display:block;        /* div 안에서 영역 전체 클릭 가능 */
+    width:100%;
+    height:100%;
+}
+
+
+/* 상단 메뉴 */
+
+.company-check-menu{
+display:flex;
+gap:40px;
+}
+
+.company-check-menu a{
+background:#6b83d6;
+color:white;
+padding:10px 25px;
+border-radius:6px;
+text-decoration:none;
+}
+
+.company-check-menu a:hover{
+background:#5569c1;
+}
+
+
+/* 로그아웃 */
+
+.company-check-logout{
 padding:6px 12px;
-margin-left: auto;
-/**/cursor:pointer;
-/**/border:1px solid #888;
-/**/border-radius:8px;
 }
-/**/.logout:hover{
+
+.company-check-logout:hover{
 background:#dcdcdc;
-}/*조금은 내 생각관 다름 그치만 좋은 듯*/
+}
 
 
+/* 메인 영역 */
 
-
-
-/* 왼쪽 영역 */
-.header-left{
+.company-check-main{
 display:flex;
-gap:30px;/*공통으로 맞출것*/
-/**/align-items:center;
-}
-
-/*관리자페이지*/
-.title{
-width:150px;/*공통으로 맞출것*/
-background:#6b83d6;
-color:white;
-text-align: center;
-margin-bottom: 20px;/*이것만 밑에랑 간격띄게끔*/
-/**/padding:12px 35px;/*공통으로 맞출것*/
-box-sizing: content-box;/*공통으로 맞출것*/
-/**/border-radius:8px;
-/**/font-weight:bold;
-}
-
-/*메뉴모음집*/
-.menu1{
-flex:1;
-display:flex;/*이걸 써야 밑(자식)에께 의미가 있어짐*/
-/* gap:350px;이거 간격 !!!!!!!! 조정해볼것!!!!!!!! */
-/**/justify-content:space-around;
-background:#6b83d6;
-margin-bottom: 20px;/*이것만 밑에랑 간격띄게끔*/
-/**/padding:12px 35px;/*공통으로 맞출것*/
-/**/border-radius:8px;
-}
-.menu1 a{
-color:white;
-text-decoration:none;/*밑줄제거*/
-/**/font-weight:bold;
+margin-top:30px;
+gap:20px;
 }
 
 
+/* 사이드바 */
 
-
-
-
-
-/* ----------------------메인 영역 ---------------------*/
-.main{
-display:flex;
-gap:30px;
-/**//* margin-top:20px; */
-}
-
-
-
-/* 왼쪽 사이드바 */
-.m-leftbar{
-width:220px;/*140+35+35*/
+.company-check-sidebar{
+width:200px;
 background:#adbbdb;
-box-sizing: content-box;
+padding-top:20px;
 }
 
-.aaa{
-background:#8a8a8a;
-color:white;
-font-weight:700;
-/*?*/cursor:default;
-/*?*/user-select:none;
-}
-.m-left-item{
+.company-check-sidebar-item{
+padding:20px;
 margin-bottom:10px;
 text-align:center;
-border-radius:4px;
-color:#222;
-/**/padding:12px 35px;/*공통으로 맞출것*//*이게 킥*/
-/*?*/cursor:pointer;
+cursor:pointer;
+background:#adbbdb;
 }
-.m-left-item:hover{
+
+.company-check-sidebar-item a{
+color:black;
+text-decoration:none;
+display:block;
+}
+
+.company-check-sidebar-item:hover{
 background:#949fca;
+}
+
+.company-check-sidebar-item:hover a{
 color:white;
 }
 
+.company-check-sidebar-item.company-check-active{
+background:#8a8a8a;
+}
 
-
+.company-check-sidebar-item.company-check-active a{
+color:white;
+font-weight:700;
+}
 
 
 /* 오른쪽 콘텐츠 영역 */
-.m-right{
+
+.company-check-content{
 flex:1;
-background:white;
+background:#f5f5f5;
 padding:30px;
 }
 
-/* 콘텐츠 */
 
-.content{
-    flex:1;
-    background:#f5f5f5;
-    margin-left:20px;
-    padding:30px;
+/* 페이지 제목 */
+
+.company-check-title-area{
+font-weight:bold;
+margin-bottom:60px;
 }
 
-.titlel{
-    font-weight:bold;
-    margin-bottom:100px;
+
+/* 서브 타이틀 */
+
+.company-check-subtitle{
+margin-bottom:10px;
 }
 
-.subtitle{
-    margin-bottom:10px;
+
+/* 리스트 전체 */
+
+.company-check-table{
+width:100%;
+border-top:2px solid #aaa;
+background:white;
 }
 
-/* 테이블 */
 
-table{
-    width:100%;
-    border-collapse:collapse;
+/* 한 줄 */
+
+.company-check-row{
+display:flex;
+border-bottom:1px solid #ccc;
 }
 
-th, td{
-    padding:10px;
-    border-bottom:1px solid #ccc;
-    text-align:left;
+
+/* 헤더 */
+
+.company-check-head{
+background:#e5e5e5;
+font-weight:bold;
 }
 
-th{
-    border-bottom:2px solid #aaa;
+
+/* 컬럼 */
+
+.company-check-col{
+padding:12px 10px;
+flex:1;
 }
 
-.link{
-    color:#2a63ff;
-    text-decoration:none;
+
+/* 컬럼 크기 */
+
+.company-check-col.number{
+flex:0.5;
 }
 
-.status{
-    color:#333;
+.company-check-col.id{
+flex:1.5;
+}
+
+.company-check-col.company{
+flex:2;
+}
+
+.company-check-col.date{
+flex:1;
+}
+
+.company-check-col.status{
+flex:1;
+}
+
+
+/* 링크 */
+
+.company-check-link{
+color:#2a63ff;
+text-decoration:none;
+}
+
+.company-check-link:hover{
+text-decoration:underline;
+}
+
+
+/* 상태 */
+
+.company-check-col.status{
+color:#333;
 }

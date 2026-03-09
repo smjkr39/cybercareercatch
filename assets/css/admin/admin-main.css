@@ -57,7 +57,7 @@ gap:20px;
 }
 
 /* 왼쪽 사이드바 */
-
+/* 
 .admin-main-leftbar{
 width:200px;
 background:#adbbdb;
@@ -84,16 +84,30 @@ background:#949fca;
 
 .admin-main-left-item:hover a{
 color:white;
-}
-
+} */
+/* 
 .admin-main-left-item.admin-main-active{
 background:#8a8a8a;
-}
+} 
 
-.admin-main-left-item.admin-main-active a{
+ .admin-main-left-item.admin-main-active a{
 color:white;
 font-weight:700;
-}
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* ------------------ 오른쪽 콘텐츠 ------------------ */

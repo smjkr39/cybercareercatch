@@ -2,179 +2,192 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
-<title>기업별 채용담담자 회원정보</title>
-<link rel="stylesheet" href="../../../assets/css/admin/member-management/member-info.css">
+<title>기업별 채용담당자 회원정보</title>
+<link rel="stylesheet" href="../../../assets/css/admin/member-management/recruiter-info.css">
 </head>
 
-<body class="body">
-<div class="container">
+<body class="recruiter-info-body">
 
-<!-- 상단 헤더 -->
-<header class="top">
-  <!----><div class="justlogout">
-    <button class="logout">로그아웃</button>
-  </div>
+<div class="recruiter-info-container">
 
-  <div class="header-left">
-    <div class="title">관리자 페이지</div>
-    <nav class="menu1">
-      <a href="#">회원관리</a>
-      <a href="#">메인관리</a>
-      <a href="#">커뮤니티 관리</a>
-    </nav>
-  </div>
+<header class="recruiter-info-header">
 
+<div class="recruiter-info-title">
+ <a href="../admin-main.html">관리자 페이지</a>
+</div>
+
+<nav class="recruiter-info-menu">
+<a href="../member-management/member-info.html">회원 관리</a>
+<a href="../main-management/qna-management.html">메인 관리</a>
+<a href="../community-management/expo-schedule.html">커뮤니티 관리</a>
+</nav>
+
+<button class="recruiter-info-logout">로그아웃</button>
 
 </header>
 
 
-<!-- 메인 영역 -->
-<main class="main">
-<!-- 왼쪽 사이드 메뉴 -->
-<aside class="m-leftbar">
-  <div class="m-left-item">일반 회원 정보 조회</div>
-  <div class="m-left-item aaa">기업 회원 정보 조회</div>
-  <div class="m-left-item">기업회원 승인, 반려</div>
+<main class="recruiter-info-main">
+
+<!-- 왼쪽 사이드바 -->
+<aside class="recruiter-info-sidebar">
+
+<div class="recruiter-info-sidebar-item">
+<a href="./member-info.html">일반회원 정보 조회</a>
+</div>
+
+<div class="recruiter-info-sidebar-item">
+<a href="./company-check.html">기업회원 승인,반려</a>
+</div>
+
+<div class="recruiter-info-sidebar-item recruiter-info-active">
+<a href="./recruiter-info.html">기업회원 정보 조회</a>
+</div>
+
 </aside>
 
 
-
-
-
-
-
-
-
-<!--<section class="qnaManagement-content">-->
-
-
-
 <!-- 오른쪽 콘텐츠 -->
-<section class="m-right">
+<section class="recruiter-info-content">
 
-<h2 class="content-title">기업회원 정보 및 관리</h2>
+<h2 class="recruiter-info-content-title">기업회원 정보 및 관리</h2>
 
 <!-- 검색 -->
-<div class="search-box">
+<div class="recruiter-info-search-box">
 
-<span>- 검색</span>
+<span class="recruiter-info-search-label">- 검색</span>
 
-<select>
+<select class="recruiter-info-search-select">
 <option>이름</option>
 <option>아이디</option>
 </select>
 
-<input type="text">
+<input type="text" class="recruiter-info-search-input">
 
-<button class="search-btn">검색</button>
+<button class="recruiter-info-search-btn">검색</button>
 
 </div>
 
 
-<!-- 회원 테이블 -->
-<table class="member-table">
+<!-- 회원 리스트 -->
+<div class="recruiter-info-table">
 
-<thead>
+<!-- 헤더 -->
+<div class="recruiter-info-table-header">
 
-<tr>
-<th>번호</th>
-<th>아이디</th>
-<th>이름</th>
-<th>관리</th>
-</tr>
+<div class="recruiter-info-col recruiter-info-col-num">번호</div>
+<div class="recruiter-info-col recruiter-info-col-id">아이디</div>
+<div class="recruiter-info-col recruiter-info-col-name">이름</div>
+<div class="recruiter-info-col recruiter-info-col-manage">관리</div>
 
-</thead>
+</div>
 
+<!-- row -->
+<div class="recruiter-info-row">
+<div class="recruiter-info-col recruiter-info-col-num">210</div>
+<div class="recruiter-info-col recruiter-info-col-id">zaps00121</div>
+<div class="recruiter-info-col recruiter-info-col-name">김성민</div>
+<div class="recruiter-info-col recruiter-info-col-manage">
+<button class="recruiter-info-delete-btn">삭제</button>
+</div>
+</div>
 
-<tbody>
+<div class="recruiter-info-row">
+<div class="recruiter-info-col recruiter-info-col-num">209</div>
+<div class="recruiter-info-col recruiter-info-col-id">dkoskd457</div>
+<div class="recruiter-info-col recruiter-info-col-name">김민석</div>
+<div class="recruiter-info-col recruiter-info-col-manage">
+<button class="recruiter-info-delete-btn">삭제</button>
+</div>
+</div>
 
-<tr>
-<td>210</td>
-<td>zaps00121</td>
-<td>김성민</td>
-<td><button class="delete-btn">삭제</button></td>
-</tr>
+<div class="recruiter-info-row">
+<div class="recruiter-info-col recruiter-info-col-num">208</div>
+<div class="recruiter-info-col recruiter-info-col-id">sadswo212</div>
+<div class="recruiter-info-col recruiter-info-col-name">김지훈</div>
+<div class="recruiter-info-col recruiter-info-col-manage">
+<button class="recruiter-info-delete-btn">삭제</button>
+</div>
+</div>
 
-<tr>
-<td>209</td>
-<td>dkoskd457</td>
-<td>김민석</td>
-<td><button class="delete-btn">삭제</button></td>
-</tr>
+<div class="recruiter-info-row">
+<div class="recruiter-info-col recruiter-info-col-num">207</div>
+<div class="recruiter-info-col recruiter-info-col-id">zzdooop2122</div>
+<div class="recruiter-info-col recruiter-info-col-name">이지훈</div>
+<div class="recruiter-info-col recruiter-info-col-manage">
+<button class="recruiter-info-delete-btn">삭제</button>
+</div>
+</div>
 
-<tr>
-<td>208</td>
-<td>sadswo212</td>
-<td>김지훈</td>
-<td><button class="delete-btn">삭제</button></td>
-</tr>
+<div class="recruiter-info-row">
+<div class="recruiter-info-col recruiter-info-col-num">206</div>
+<div class="recruiter-info-col recruiter-info-col-id">ppap2232</div>
+<div class="recruiter-info-col recruiter-info-col-name">이상혁</div>
+<div class="recruiter-info-col recruiter-info-col-manage">
+<button class="recruiter-info-delete-btn">삭제</button>
+</div>
+</div>
 
-<tr>
-<td>207</td>
-<td>zzdooop2122</td>
-<td>이지훈</td>
-<td><button class="delete-btn">삭제</button></td>
-</tr>
+<div class="recruiter-info-row">
+<div class="recruiter-info-col recruiter-info-col-num">205</div>
+<div class="recruiter-info-col recruiter-info-col-id">zzdkk223</div>
+<div class="recruiter-info-col recruiter-info-col-name">손흥민</div>
+<div class="recruiter-info-col recruiter-info-col-manage">
+<button class="recruiter-info-delete-btn">삭제</button>
+</div>
+</div>
 
-<tr>
-<td>206</td>
-<td>ppap2232</td>
-<td>이상혁</td>
-<td><button class="delete-btn">삭제</button></td>
-</tr>
+<div class="recruiter-info-row">
+<div class="recruiter-info-col recruiter-info-col-num">204</div>
+<div class="recruiter-info-col recruiter-info-col-id">zdjjjj122</div>
+<div class="recruiter-info-col recruiter-info-col-name">김민아</div>
+<div class="recruiter-info-col recruiter-info-col-manage">
+<button class="recruiter-info-delete-btn">삭제</button>
+</div>
+</div>
 
-<tr>
-<td>205</td>
-<td>zzdkk223</td>
-<td>손흥민</td>
-<td><button class="delete-btn">삭제</button></td>
-</tr>
+<div class="recruiter-info-row">
+<div class="recruiter-info-col recruiter-info-col-num">203</div>
+<div class="recruiter-info-col recruiter-info-col-id">qese2232</div>
+<div class="recruiter-info-col recruiter-info-col-name">변준호</div>
+<div class="recruiter-info-col recruiter-info-col-manage">
+<button class="recruiter-info-delete-btn">삭제</button>
+</div>
+</div>
 
-<tr>
-<td>204</td>
-<td>zdjjjj122</td>
-<td>김민아</td>
-<td><button class="delete-btn">삭제</button></td>
-</tr>
+<div class="recruiter-info-row">
+<div class="recruiter-info-col recruiter-info-col-num">202</div>
+<div class="recruiter-info-col recruiter-info-col-id">illdl2232</div>
+<div class="recruiter-info-col recruiter-info-col-name">고길동</div>
+<div class="recruiter-info-col recruiter-info-col-manage">
+<button class="recruiter-info-delete-btn">삭제</button>
+</div>
+</div>
 
-<tr>
-<td>203</td>
-<td>qese2232</td>
-<td>변준호</td>
-<td><button class="delete-btn">삭제</button></td>
-</tr>
+<div class="recruiter-info-row">
+<div class="recruiter-info-col recruiter-info-col-num">201</div>
+<div class="recruiter-info-col recruiter-info-col-id">ksm92313</div>
+<div class="recruiter-info-col recruiter-info-col-name">이재용</div>
+<div class="recruiter-info-col recruiter-info-col-manage">
+<button class="recruiter-info-delete-btn">삭제</button>
+</div>
+</div>
 
-<tr>
-<td>202</td>
-<td>illdl2232</td>
-<td>고길동</td>
-<td><button class="delete-btn">삭제</button></td>
-</tr>
-
-<tr>
-<td>201</td>
-<td>ksm92313</td>
-<td>이재용</td>
-<td><button class="delete-btn">삭제</button></td>
-</tr>
-
-</tbody>
-
-</table>
+</div>
 
 
 <!-- 페이지네이션 -->
 
-<div class="pagination">
+<div class="recruiter-info-pagination">
 
 <span>&lt;&lt;</span>
 <span>&lt;</span>
 
-<a class="active">1</a>
-<a>2</a>
-<a>3</a>
-<a>4</a>
-<a>5</a>
+<a class="recruiter-info-page recruiter-info-page-active">1</a>
+<a class="recruiter-info-page">2</a>
+<a class="recruiter-info-page">3</a>
+<a class="recruiter-info-page">4</a>
+<a class="recruiter-info-page">5</a>
 
 <span>&gt;</span>
 <span>&gt;&gt;</span>
@@ -183,13 +196,9 @@
 
 </section>
 
-</section>
-
-
-
-
 </main>
 
 </div>
+
 </body>
 </html>
