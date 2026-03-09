@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             tabs.forEach(t => t.classList.remove('active'));
             tab.classList.add('active');
-            alert(tab.textContent + " 탭 클릭됨");
+            alert(tab.textContent + "  클릭");
         });
     });
 

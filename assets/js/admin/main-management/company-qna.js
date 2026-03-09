@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let noticeRow = null;
     let qnaRows = Array.from(qnaTable.querySelectorAll(".qna-row:not(.qna-head)"));
 
-    // 공지 수정
+ 
     noticeBtn.addEventListener("click", () => {
         if (!noticeBox.dataset.editing) {
             noticeBox.dataset.editing = "true";
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    // 페이지네이션
+
     function showPage(page) {
         currentPage = page;
         const start = (page-1)*rowsPerPage;
@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    // 삭제
+
     deleteBtn.addEventListener("click", ()=>{
         const visibleRows = qnaRows.filter(r=>r.style.display!=="none");
         const checkedBoxes = visibleRows.map(r=>r.querySelector('input[type="checkbox"]')).filter(b=>b.checked);
@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    // 기업 필터
+
     companySelect.addEventListener("change", ()=>{
         const selected = companySelect.value;
         qnaRows.forEach(row=>{

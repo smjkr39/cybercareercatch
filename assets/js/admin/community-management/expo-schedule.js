@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function(){
     1:["성민교회","성민치과"]
   };
 
-  // ---------------- 박람회 클릭 ----------------
+
   function renderCompanies(expoNum){
     const companies = expoCompanies[expoNum] || [];
     let html = "<h3>참가기업 목록</h3>";
@@ -33,7 +33,6 @@ document.addEventListener("DOMContentLoaded", function(){
     companyBox.innerHTML = html;
   }
 
-  // ---------------- 박람회 행 클릭 이벤트 ----------------
   expoRows.forEach(row=>{
     row.addEventListener("click",function(){
       const expoNum = this.children[0].textContent;
@@ -41,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function(){
     });
   });
 
-  // ---------------- 기업 삭제 ----------------
+
   deleteBtn.addEventListener("click",function(){
     const checked = document.querySelectorAll(".expoSchedule-company-row input:checked");
     if(checked.length===0){ alert("삭제할 기업을 선택하세요"); return; }
@@ -50,7 +49,6 @@ document.addEventListener("DOMContentLoaded", function(){
     }
   });
 
-  // ---------------- 페이지네이션 ----------------
   const rowsPerPage = 5;
   let currentPage = 1;
   const totalPages = Math.ceil(expoRows.length / rowsPerPage);
@@ -62,7 +60,7 @@ document.addEventListener("DOMContentLoaded", function(){
       row.style.display = (i >= start && i < end) ? "flex" : "none";
     });
 
-    // 페이지 active 클래스
+
     pageSpans.forEach(span => span.classList.remove("expoSchedule-page-active"));
     const span = Array.from(pageSpans).find(s => parseInt(s.textContent) === page);
     if(span) span.classList.add("expoSchedule-page-active");

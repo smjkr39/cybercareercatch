@@ -46,33 +46,42 @@
     margin-top: 30px;
 }
 
-.qnaMgmt-side {
+/* 왼쪽 메뉴 */
+.qna-leftbar {
     width: 200px;
     background: #adbbdb;
     padding-top: 20px;
-
 }
 
-.qnaMgmt-side>div>a {
-    color: inherit;
-    text-decoration: none;
-}
-
-.qnaMgmt-sideItem {
+.qna-left-item {
     padding: 20px;
     margin-bottom: 10px;
     text-align: center;
     cursor: pointer;
+    background: #adbbdb; 
 }
 
-.qnaMgmt-sideItem:hover {
-    background: #949fca;
-    color: white;
+.qna-left-item a {
+    color: black;       
+    text-decoration: none;  
+    display: block;
 }
 
-.qnaMgmt-active {
-    background: #8a8a8a;
-    color: white;
+.qna-left-item:hover {
+    background: #949fca; 
+}
+
+.qna-left-item:hover a {
+    color: white;          
+}
+
+.qna-left-item.qna-active {
+    background: #8a8a8a;   
+}
+
+.qna-left-item.qna-active a {
+    color: white;           
+    font-weight: 700;
 }
 
 .qnaMgmt-ct {

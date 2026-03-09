@@ -49,34 +49,44 @@
     gap:20px;
 }
 
-/* sidebar */
-
-.companyInfo-side{
-    width:200px;
-    background:#adbbdb;
-    padding-top:20px;
+.companyInfo-leftbar {
+    width: 200px;
+    background: #adbbdb;
+    padding-top: 20px;
 }
 
-.companyInfo-sideItem{
-    padding:20px;
-    margin-bottom:10px;
-    text-align:center;
-    cursor:pointer;
-    border-radius:4px;
+/* 기본 메뉴 */
+.companyInfo-left-item {
+    padding: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    cursor: pointer;
+    background: #adbbdb; /* 기본 하늘색 */
 }
 
-.companyInfo-sideItem:hover{
-    background:#949fca;
-    color:white;
+/* 링크 */
+.companyInfo-left-item a {
+    color: black;           
+    text-decoration: none;  
+    display: block;
 }
 
-.companyInfo-active{
-    background:#8a8a8a;
-    color:white;
-    font-weight:bold;
+/* hover */
+.companyInfo-left-item:hover {
+    background: #949fca;
+}
+.companyInfo-left-item:hover a {
+    color: white;
 }
 
-/* content */
+/* 클릭(활성화) 메뉴 */
+.companyInfo-left-item.companyInfo-active {
+    background: #8a8a8a;
+}
+.companyInfo-left-item.companyInfo-active a {
+    color: white;
+    font-weight: 700;
+}
 
 .companyInfo-ct{
     flex:1;

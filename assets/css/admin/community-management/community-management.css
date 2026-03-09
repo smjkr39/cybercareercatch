@@ -43,28 +43,45 @@ margin-top:30px;
 gap:20px;
 }
 
-.qnaMgmt-side{
-width:200px;
-background:#adbbdb;
-padding-top:20px;
+.qna-leftbar {
+    width: 200px;
+    background: #adbbdb;
+    padding-top: 20px;
 }
 
-.qnaMgmt-sideItem{
-padding:20px;
-margin-bottom:10px;
-text-align:center;
-cursor:pointer;
+
+.qna-left-item {
+    padding: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    cursor: pointer;
+    background: #adbbdb; 
 }
 
-.qnaMgmt-sideItem:hover{
-background:#949fca;
-color:white;
+
+.qna-left-item a {
+    color: black;       
+    text-decoration: none;  
+    display: block;
 }
 
-.qnaMgmt-active{
-background:#8a8a8a;
-color:white;
-font-weight:700;
+
+.qna-left-item:hover {
+    background: #949fca; 
+}
+
+.qna-left-item:hover a {
+    color: white;          
+}
+
+
+.qna-left-item.qna-active {
+    background: #8a8a8a;   
+}
+
+.qna-left-item.qna-active a {
+    color: white;           
+    font-weight: 700;
 }
 
 .qnaMgmt-ct{
@@ -74,7 +91,7 @@ padding:40px;
 }
 
 
-/* 공지 */
+
 
 .qnaMgmt-noticeBox{
 width:70%;
@@ -98,7 +115,6 @@ cursor:pointer;
 }
 
 
-/* 게시판 */
 
 .qnaMgmt-table{
 width:100%;
@@ -121,7 +137,7 @@ font-weight:bold;
 .col5{width:120px;text-align:center;}
 
 
-/* 페이지 */
+
 
 .qnaMgmt-page{
 display:flex;
@@ -140,7 +156,7 @@ font-weight:bold;
 }
 
 
-/* 삭제 */
+
 
 .qnaMgmt-del{
 display:flex;

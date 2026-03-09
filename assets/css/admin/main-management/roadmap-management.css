@@ -18,22 +18,43 @@
 }
 
 /* 사이드바 */
-.rm-leftbar{
-    width:200px;
-    background:#adbbdb;
-    padding-top:20px;
+.rm-leftbar {
+    width: 200px;
+    background: #adbbdb; /* 기본 하늘색 배경 */
+    padding-top: 20px;
 }
 
-.rm-left-item{
-    padding:20px;
-    margin-bottom:10px;
-    text-align:center;
-    cursor:pointer;
+/* 메뉴 아이템 */
+.rm-left-item {
+    padding: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    cursor: pointer;
+    background: #adbbdb; /* 기본 배경 */
 }
 
-.rm-active{
-    background:#8a8a8a;
-    color:white;
+/* 링크 */
+.rm-left-item a {
+    color: black;           /* 기본 글자 검정 */
+    text-decoration: none;  /* 밑줄 제거 */
+    display: block;
+}
+
+/* hover */
+.rm-left-item:hover {
+    background: #949fca;    /* hover 배경 진하게 */
+}
+.rm-left-item:hover a {
+    color: white;           /* hover 글자 하얀색 */
+}
+
+/* 활성화 메뉴 */
+.rm-left-item.rm-active {
+    background: #8a8a8a;    /* 클릭된 배경 회색 */
+}
+.rm-left-item.rm-active a {
+    color: white;            /* 클릭된 글자 하얀색 */
+    font-weight: 700;
 }
 
 /* 오른쪽 콘텐츠 */
