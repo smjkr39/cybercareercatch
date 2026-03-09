@@ -10,17 +10,37 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
   
-  <!-- 작성해주신 CSS 원래 경로 그대로 복구 -->
+  <!-- CSS 연결 -->
   <link rel="stylesheet" href="../../../assets/css/main/account/user-agreement-member.css" />
 </head>
 <body>
- 
+  <header></header>
+
+  <!--
+    =============================================================
+    [클래스명 안내]
+    * 기업회원가입 양식과 동일한 구조 적용 완료 (경로 표시줄 삭제)
+    * user_agree_mem_container      : 약관동의 페이지 전체를 감싸는 바탕 영역
+    * user_agree_mem_inner          : 중앙 정렬을 위한 이너 박스
+    * user_agree_mem_main_title     : 페이지 상단 큰 제목
+    * user_agree_mem_form           : 약관 내용과 버튼을 모두 감싸는 form 태그
+    * user_agree_mem_section        : 각 조항을 하나씩 묶는 구역
+    * user_agree_mem_subtitle       : 각 조항의 소제목
+    * user_agree_mem_box            : 스크롤이 들어가는 약관 내용 박스
+    * user_agree_mem_check_wrap     : 체크박스와 텍스트를 정렬해 묶는 구역
+    * user_agree_mem_check_text     : '[필수] ~동의합니다' 텍스트
+    * user_agree_mem_checkbox       : 실제 클릭하는 네모난 체크박스 요소
+    * req-checkbox                  : JS 제어용 식별 클래스
+    * user_agree_mem_bottom_area    : 전체동의와 확인버튼을 감싸는 하단 구역
+    * user_agree_mem_all_wrap       : 전체동의 라벨 묶음
+    * user_agree_mem_btn_wrap       : 확인 버튼을 담는 컨테이너
+    * user_agree_mem_submit_btn     : 최종 '확인' 버튼
+    =============================================================
+  -->
 
   <main class="user_agree_mem_container">
     <div class="user_agree_mem_inner">
       
-  
-
       <!-- 페이지 제목 -->
       <h2 class="user_agree_mem_main_title">일반회원가입 약관동의</h2>
 
@@ -83,7 +103,7 @@
           </label>
         </section>
 
-        <!-- 우측 하단 전체동의 및 확인 버튼 영역 -->
+        <!-- 우측 하단 전체동의 및 버튼 영역 (기업회원 폼 구조와 동일하게 적용) -->
         <div class="user_agree_mem_bottom_area">
           <label class="user_agree_mem_all_wrap">
             <span class="user_agree_mem_check_text" style="font-weight: 700;">전체동의</span>
@@ -98,9 +118,51 @@
     </div>
   </main>
 
-  
+  <footer></footer>
 
-  <!-- 분리된 JS 파일 연결 (경로 규칙에 맞춤) -->
-  <script src="../../../assets/js/main/account/user-agreement-member.js"></script>
+  <!-- 유효성 검사 및 전체동의 자바스크립트 -->
+  <script>
+    const form = document.getElementById('userAgreeMemForm');
+    const chkAll = document.getElementById('chkAll');
+    const reqCheckboxes = document.querySelectorAll('.req-checkbox');
+
+    // 1. 전체동의 체크박스 클릭 시 동작
+    chkAll.addEventListener('change', function() {
+      const isChecked = this.checked;
+      reqCheckboxes.forEach(function(checkbox) {
+        checkbox.checked = isChecked;
+      });
+    });
+
+    // 2. 개별 체크박스 클릭 시 전체동의 상태 업데이트
+    reqCheckboxes.forEach(function(checkbox) {
+      checkbox.addEventListener('change', function() {
+        let allChecked = true;
+        reqCheckboxes.forEach(function(chk) {
+          if (!chk.checked) allChecked = false;
+        });
+        chkAll.checked = allChecked;
+      });
+    });
+
+    // 3. 폼 제출(확인 버튼) 시 필수 체크 확인
+    form.addEventListener('submit', function(event) {
+      event.preventDefault(); // 기본 이동 방지
+      
+      let isAllChecked = true;
+      reqCheckboxes.forEach(function(checkbox) {
+        if (!checkbox.checked) {
+          isAllChecked = false;
+        }
+      });
+
+      if (!isAllChecked) {
+        alert("동의란을 체크해주세요");
+      } else {
+        // 실제 다음 일반 회원가입 페이지로 연결될 주소 입력
+        window.location.href = "signup_user.html"; 
+      }
+    });
+  </script>
 </body>
 </html>

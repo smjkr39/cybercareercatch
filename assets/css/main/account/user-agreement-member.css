@@ -1,20 +1,21 @@
 /*
   =============================================================
   [클래스명 안내]
+  * 기업회원가입 약관동의 양식(디자인)과 완벽하게 동일하게 맞춤
+  * 경로 표시줄(Breadcrumb) 관련 CSS 삭제됨
+  
   * user_agree_mem_container : 약관동의 페이지 전체 바탕 영역
-  * user_agree_mem_inner     : 중앙 정렬 및 최대 너비를 제한하는 이너 박스
-  * user_agree_mem_path: 상단 경로 표시줄 (홈 > 회원가입 > 일반 회원가입)
-  * user_agree_mem_main_title: 페이지 상단 큰 제목 (일반약관동의)
-  * user_agree_mem_form      : 약관과 버튼을 모두 감싸는 폼
-  * user_agree_mem_section   : 각 약관(1~4번)을 하나씩 묶는 단위 구역
-  * user_agree_mem_subtitle  : 각 약관의 소제목 (예: 1. 서비스 이용약관 동의)
-  * user_agree_mem_box       : 약관 내용이 들어가는 스크롤 박스 (테두리 있는 박스)
-  * user_agree_mem_check_wrap: 체크박스와 글자를 가로로 묶는 구역 (개별 항목)
-  * user_agree_mem_check_text: '[필수] ~동의합니다' 글자
-  * user_agree_mem_checkbox  : 실제 클릭하는 개별 필수 네모 체크박스
-  * user_agree_mem_bottom_area: 전체동의와 버튼을 묶는 하단 영역
-  * user_agree_mem_all_wrap  : 우측 하단 '전체동의' 부분을 묶는 구역
-  * user_agree_mem_btn_wrap  : 확인 버튼을 우측 하단으로 정렬하는 구역
+  * user_agree_mem_inner     : 중앙 정렬을 위한 이너 박스 (최대 너비 지정)
+  * user_agree_mem_main_title: 페이지 상단 큰 제목 (일반회원가입 약관동의)
+  * user_agree_mem_section   : 각 조항을 하나씩 묶는 구역
+  * user_agree_mem_subtitle  : 각 조항의 소제목
+  * user_agree_mem_box       : 스크롤이 들어가는 회색 약관 내용 박스
+  * user_agree_mem_check_wrap: 체크박스와 텍스트를 오른쪽으로 정렬해 묶는 구역
+  * user_agree_mem_check_text: '[필수] ~동의합니다' 텍스트
+  * user_agree_mem_checkbox  : 실제 클릭하는 네모난 체크박스 요소
+  * user_agree_mem_bottom_area: 전체동의와 확인버튼을 감싸는 하단 구역
+  * user_agree_mem_all_wrap  : 전체동의 라벨(텍스트+체크박스) 묶음
+  * user_agree_mem_btn_wrap  : 버튼을 담는 컨테이너 (우측 정렬용)
   * user_agree_mem_submit_btn: 파란색 '확인' 최종 버튼
   =============================================================
 */
@@ -23,94 +24,84 @@ body {
   margin: 0;
   background-color: #ffffff;
   font-family: "Noto Sans KR", "Malgun Gothic", sans-serif;
-  color: #222222;
+  color: #333333;
+}
+
+header {
+  height: 166px;
+  background-color: #ff0000;
 }
 
 * {
   box-sizing: border-box;
 }
 
+/* 메인 컨테이너 */
 .user_agree_mem_container {
-  padding: 40px 20px 140px;
+  padding: 40px 20px 120px;
 }
 
+/* 폼 중앙 정렬용 이너 박스  */
 .user_agree_mem_inner {
-  max-width: 900px;
+  max-width: 860px;
   margin: 0 auto;
 }
 
-.user_agree_mem_path {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-bottom: 48px;
-  font-size: 13px;
-  color: #777;
-}
-
-.user_agree_mem_path_link {
-  color: #555;
-  text-decoration: none;
-}
-
-.user_agree_mem_path_link:hover {
-  text-decoration: underline;
-}
-
-.user_agree_mem_path_arrow {
-  color: #999;
-}
-
-.user_agree_mem_path_current {
-  color: #666;
-}
-
+/* 타이틀  */
 .user_agree_mem_main_title {
   font-size: 28px;
   font-weight: 700;
-  color: #7c84ff;
+  color: #7c84ff; 
   margin: 0 0 40px 0;
   padding-bottom: 20px;
   border-bottom: 2px solid #e0e0e0;
 }
 
+/* 개별 약관 섹션 */
 .user_agree_mem_section {
-  margin-bottom: 32px;
+  margin-bottom: 40px;
 }
 
+/* 소제목 */
 .user_agree_mem_subtitle {
-  font-size: 18px;
-  font-weight: 700;
-  color: #111111;
-  margin: 0 0 16px 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #222222;
+  margin: 0 0 12px 0;
 }
 
+/* 스크롤 가능한 약관 텍스트 박스  */
 .user_agree_mem_box {
   width: 100%;
-  padding: 24px;
-  border: 1px solid #c4c4c4;
-  background-color: #ffffff;
-  font-size: 14px;
+  height: 120px;
+  padding: 16px;
+  background-color: #f8f9fa; /* 회색 배경 */
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  font-size: 13px;
   line-height: 1.6;
-  color: #333333;
+  color: #555555;
+  overflow-y: auto; /* 세로 스크롤 생성 */
   margin-bottom: 12px;
-  height: 140px;
-  overflow-y: auto;
 }
 
+/* 체크박스 영역 (기업양식처럼 우측 정렬 적용) */
 .user_agree_mem_check_wrap {
   display: flex;
   align-items: center;
+  justify-content: flex-end; /* 우측 끝으로 밀기 */
   gap: 8px;
   cursor: pointer;
 }
 
+/* 체크박스 텍스트 */
 .user_agree_mem_check_text {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 600;
-  color: #111111;
+  color: #333333;
 }
 
+/* 실제 체크박스 디자인 */
 .user_agree_mem_checkbox {
   width: 18px;
   height: 18px;
@@ -119,6 +110,7 @@ body {
   margin: 0;
 }
 
+/* 우측 하단 전체동의 구역 */
 .user_agree_mem_bottom_area {
   display: flex;
   flex-direction: column;
@@ -134,6 +126,12 @@ body {
   cursor: pointer;
 }
 
+.user_agree_mem_btn_wrap {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* 확인 버튼 */
 .user_agree_mem_submit_btn {
   background-color: #7c84ff;
   color: #ffffff;
@@ -151,29 +149,28 @@ body {
   background-color: #6c75ff;
 }
 
+/* 모바일 반응형 */
 @media (max-width: 768px) {
   .user_agree_mem_container {
     padding: 20px 16px 80px;
   }
+  
   .user_agree_mem_main_title {
     font-size: 24px;
   }
-  .user_agree_mem_box {
-    padding: 16px;
-    height: 120px;
+
+  .user_agree_mem_check_wrap {
+    justify-content: flex-start; /* 모바일에서는 보기 편하게 좌측 정렬 */
   }
-  .user_agree_mem_subtitle {
-    font-size: 16px;
-  }
-  .user_agree_mem_check_text {
-    font-size: 14px;
-  }
+
   .user_agree_mem_submit_btn {
-    width: 100%;
+    width: 100%; /* 모바일에서는 꽉 차는 버튼 */
   }
+
   .user_agree_mem_bottom_area {
     align-items: stretch;
   }
+
   .user_agree_mem_all_wrap {
     justify-content: flex-end;
   }

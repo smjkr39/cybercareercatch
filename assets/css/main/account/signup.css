@@ -19,6 +19,11 @@ body {
   background-color: #ffffff !important; /* 다른 CSS에 밀리지 않도록 !important 추가 */
 }
 
+header{
+  height: 166px;
+  background-color: #ff0000;
+}
+
 /* 전체 컨테이너 */
 .account_signup_container {
   padding: 24px 0 140px;

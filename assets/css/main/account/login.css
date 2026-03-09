@@ -26,6 +26,10 @@ body {
   color: #222222;
 }
 
+header{
+  height: 166px;
+  background-color: #ff0000;
+}
 * {
   box-sizing: border-box;
 }

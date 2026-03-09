@@ -30,6 +30,10 @@
   =============================================================
 */
 
+header{
+  height: 166px;
+  background-color: #ff0000;
+}
 .account_signup_company_body {
   margin: 0;
   background: #ffffff;

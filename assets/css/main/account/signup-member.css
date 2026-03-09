@@ -34,6 +34,12 @@
 */
 
 /* signup-member_body : 페이지 전체 기본 스타일 */
+
+header{
+  height: 166px;
+  background-color: #ff0000;
+}
+
 .signup-member_body {
   margin: 0;
   background-color: #ffffff;
