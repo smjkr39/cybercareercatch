@@ -1,0 +1,233 @@
+.job-check-body{
+margin:0;
+background:#ffffff;
+}
+
+.job-check-container{
+width:1300px;
+margin:40px auto;
+background:#c9cfe0;
+padding:30px;
+}
+
+.job-check-header{
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+/* 기존 div 스타일 유지 */
+.job-check-title {
+    background:#6b83d6;
+    color:white;
+    padding:10px 20px;
+    border-radius:6px;
+    font-weight:bold;
+    cursor:pointer;
+    display:inline-block;
+}
+
+/* a 태그 스타일 초기화 + div 스타일과 동일하게 */
+.job-check-title a {
+    color: inherit;
+    text-decoration: none;
+    display:block;
+    width:100%;
+    height:100%;
+}
+
+.job-check-menu{
+display:flex;
+gap:40px;
+}
+
+.job-check-menu a{
+background:#6b83d6;
+color:white;
+padding:10px 25px;
+border-radius:6px;
+text-decoration:none;
+}
+
+.job-check-menu a:hover{
+background:#5569c1;
+}
+
+.job-check-logout{
+padding:6px 12px;
+cursor:pointer;
+}
+
+.job-check-logout:hover{
+background:#dcdcdc;
+}
+
+.job-check-main{
+display:flex;
+margin-top:30px;
+gap:20px;
+}
+
+/* 왼쪽 사이드바 */
+
+.job-check-sidebar{
+width:200px;
+background:#adbbdb;
+padding-top:20px;
+}
+
+.job-check-sidebar-item{
+padding:20px;
+margin-bottom:10px;
+text-align:center;
+cursor:pointer;
+background:#adbbdb;
+}
+
+.job-check-sidebar-item a{
+color:black;
+text-decoration:none;
+display:block;
+}
+
+.job-check-sidebar-item:hover{
+background:#949fca;
+}
+
+.job-check-sidebar-item:hover a{
+color:white;
+}
+
+.job-check-sidebar-item.job-check-active{
+background:#8a8a8a;
+}
+
+.job-check-sidebar-item.job-check-active a{
+color:white;
+font-weight:700;
+}
+
+
+/* 오른쪽 콘텐츠 */
+
+.job-check-content{
+flex:1;
+background:white;
+padding:12px 35px;
+}
+
+
+/* 제목 */
+
+.job-check-content-title{
+margin-bottom:20px;
+}
+
+
+/* 검색 영역 */
+
+.job-check-search-box{
+display:flex;
+align-items:center;
+gap:10px;
+margin-bottom:20px;
+}
+
+.job-check-search-select,
+.job-check-search-input{
+padding:5px;
+}
+
+.job-check-search-btn{
+padding:5px 10px;
+cursor:pointer;
+}
+
+
+/* 리스트 (table 대체) */
+
+.job-check-table{
+width:100%;
+border-top:2px solid #ccc;
+}
+
+.job-check-table-header{
+display:flex;
+border-bottom:2px solid #ccc;
+background:#f5f5f5;
+font-weight:bold;
+text-align:center;
+}
+
+.job-check-row{
+display:flex;
+border-bottom:1px solid #eee;
+text-align:center;
+}
+
+.job-check-col{
+padding:10px;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+/* 추가함 */
+.job-check-link-group{
+display:flex;
+flex:1;
+text-decoration:none;
+color:inherit;
+}
+
+/* 컬럼 너비 */
+
+.job-check-col-num{
+width:80px;
+}
+
+.job-check-col-id{
+width:220px;
+}
+
+.job-check-col-name{
+flex:1;
+}
+
+.job-check-col-manage{
+width:120px;
+}
+
+
+/* 삭제 버튼 */
+
+/* .job-check-check-btn{
+background:#f26c6c;
+border:none;
+color:white;
+padding:5px 12px;
+border-radius:4px;
+cursor:pointer;
+}
+
+.job-check-check-btn:hover{
+background:#e05555;
+} */
+
+
+/* 페이지네이션 */
+
+.job-check-pagination{
+margin-top:25px;
+text-align:center;
+}
+
+.job-check-pagination span,
+.job-check-page{
+margin:0 6px;
+cursor:pointer;
+}
+
+.job-check-page-active{
+font-weight:bold;
+}
